@@ -1,0 +1,45 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.4 (/home/lucads/ros2_humble/install/ament_cmake/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.12.6 (/home/lucads/ros2_humble/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lucads/irobot_ws/build/robot_traj
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/ament_index/resource_index/package_run_dependencies/robot_traj
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/ament_index/resource_index/parent_prefix_path/robot_traj
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/environment/ament_prefix_path.sh
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/environment/ament_prefix_path.dsv
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/environment/path.sh
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/environment/path.dsv
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/local_setup.bash
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/local_setup.sh
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/local_setup.zsh
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/local_setup.dsv
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/package.dsv
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/ament_index/resource_index/packages/robot_traj
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/cmake/robot_trajConfig.cmake
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/cmake/robot_trajConfig-version.cmake
+-- Symlinking: /home/lucads/irobot_ws/install/robot_traj/share/robot_traj/package.xml

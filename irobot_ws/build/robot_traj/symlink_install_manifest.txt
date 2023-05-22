@@ -1,0 +1,15 @@
+/home/lucads/irobot_ws/install/robot_traj/share/ament_index/resource_index/package_run_dependencies/robot_traj
+/home/lucads/irobot_ws/install/robot_traj/share/ament_index/resource_index/parent_prefix_path/robot_traj
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/environment/ament_prefix_path.sh
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/environment/ament_prefix_path.dsv
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/environment/path.sh
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/environment/path.dsv
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/local_setup.bash
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/local_setup.sh
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/local_setup.zsh
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/local_setup.dsv
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/package.dsv
+/home/lucads/irobot_ws/install/robot_traj/share/ament_index/resource_index/packages/robot_traj
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/cmake/robot_trajConfig.cmake
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/cmake/robot_trajConfig-version.cmake
+/home/lucads/irobot_ws/install/robot_traj/share/robot_traj/package.xml

@@ -1,0 +1,9 @@
+CMake Error at CMakeLists.txt:12:
+  Parse error.  Expected "(", got newline with text "
+
+  ".
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/lucads/irobot_ws/build/robot_traj/CMakeFiles/CMakeOutput.log".
+See also "/home/lucads/irobot_ws/build/robot_traj/CMakeFiles/CMakeError.log".

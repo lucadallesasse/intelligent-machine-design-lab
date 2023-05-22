@@ -1,0 +1,3 @@
+make[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libignition-math6.so.6.13.0', needed by 'libirobot_create_toolbox.so'.  Stop.
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/irobot_create_toolbox.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

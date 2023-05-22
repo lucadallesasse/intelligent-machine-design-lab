@@ -1,0 +1,26 @@
+[ 16%] [34m[1mAutomatic MOC for target Create3Hmi[0m
+[ 16%] Built target Create3Hmi_autogen
+[ 33%] [34m[1mGenerating qrc_Create3Hmi.cpp[0m
+[ 50%] [32mBuilding CXX object Create3Hmi/CMakeFiles/Create3Hmi.dir/Create3Hmi_autogen/mocs_compilation.cpp.o[0m
+[ 66%] [32mBuilding CXX object Create3Hmi/CMakeFiles/Create3Hmi.dir/qrc_Create3Hmi.cpp.o[0m
+[ 83%] [32mBuilding CXX object Create3Hmi/CMakeFiles/Create3Hmi.dir/Create3Hmi.cc.o[0m
+[100%] [32m[1mLinking CXX shared library libCreate3Hmi.so[0m
+[100%] Built target Create3Hmi
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/lib/libCreate3Hmi.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/ament_index/resource_index/package_run_dependencies/irobot_create_ignition_plugins
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/ament_index/resource_index/parent_prefix_path/irobot_create_ignition_plugins
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/environment/ament_prefix_path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/environment/ament_prefix_path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/environment/path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/environment/path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/local_setup.bash
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/local_setup.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/local_setup.zsh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/local_setup.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/package.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/ament_index/resource_index/packages/irobot_create_ignition_plugins
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/cmake/irobot_create_ignition_pluginsConfig.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/cmake/irobot_create_ignition_pluginsConfig-version.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins/share/irobot_create_ignition_plugins/package.xml

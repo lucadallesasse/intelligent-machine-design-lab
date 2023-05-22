@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/lucads/irobot_ws/install/irobot_create_nodes/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/lucads/irobot_ws/install/irobot_create_nodes/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/lucads/irobot_ws/install/irobot_create_nodes/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/lucads/irobot_ws/install/irobot_create_nodes/${destination}")
+      set(destination "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -309,3 +309,93 @@ endfunction()
 message(STATUS "Execute custom install script")
 
 # begin of custom install code
+
+# install("TARGETS" "hazards_vector_publisher" "DESTINATION" "lib/irobot_create_nodes")
+include("/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "ir_intensity_vector_publisher" "DESTINATION" "lib/irobot_create_nodes")
+include("/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "motion_control" "DESTINATION" "lib/irobot_create_nodes")
+include("/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "wheel_status_publisher" "DESTINATION" "lib/irobot_create_nodes")
+include("/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_symlink_install_targets_3_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "robot_state" "DESTINATION" "lib/irobot_create_nodes")
+include("/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_symlink_install_targets_4_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "ui_mgr" "DESTINATION" "lib/irobot_create_nodes")
+include("/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_symlink_install_targets_5_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "mock_publisher" "DESTINATION" "lib/irobot_create_nodes")
+include("/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_symlink_install_targets_6_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "kidnap_estimator_publisher" "DESTINATION" "lib/irobot_create_nodes")
+include("/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_symlink_install_targets_7_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "hazard_publisher_lib" "ir_intensity_publisher_lib" "motion_control_lib" "wheel_status_publisher_lib" "robot_state_lib" "ui_mgr_lib" "mock_publisher_lib" "kidnap_estimator_publisher_lib" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
+include("/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_symlink_install_targets_8_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install(DIRECTORY "include/" "DESTINATION" "include")
+ament_cmake_symlink_install_directory("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" DIRECTORY "include/" "DESTINATION" "include")
+
+# install(FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/irobot_create_nodes/environment")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/irobot_create_nodes/environment")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/irobot_create_nodes/environment")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/irobot_create_nodes/environment")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/irobot_create_nodes" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/irobot_create_nodes" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/irobot_create_nodes" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/irobot_create_nodes" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+
+# install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/irobot_create_nodes/environment")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/irobot_create_nodes/environment")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/irobot_create_nodes/environment")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/irobot_create_nodes/environment")
+
+# install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/irobot_create_nodes/environment")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/irobot_create_nodes/environment")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/irobot_create_nodes/environment")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/irobot_create_nodes/environment")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/irobot_create_nodes")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/irobot_create_nodes")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/irobot_create_nodes")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/irobot_create_nodes")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/irobot_create_nodes")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/irobot_create_nodes")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/irobot_create_nodes")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/irobot_create_nodes")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/irobot_create_nodes")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/irobot_create_nodes")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_index/share/ament_index/resource_index/packages/irobot_create_nodes" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_index/share/ament_index/resource_index/packages/irobot_create_nodes" "DESTINATION" "share/ament_index/resource_index/packages")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_index/share/ament_index/resource_index/rclcpp_components/irobot_create_nodes" "DESTINATION" "share/ament_index/resource_index/rclcpp_components")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_index/share/ament_index/resource_index/rclcpp_components/irobot_create_nodes" "DESTINATION" "share/ament_index/resource_index/rclcpp_components")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/irobot_create_nodes/cmake")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/irobot_create_nodes/cmake")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/irobot_create_nodes/cmake")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/irobot_create_nodes/cmake")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/irobot_create_nodes/cmake")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/irobot_create_nodes/cmake")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_core/irobot_create_nodesConfig.cmake" "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_core/irobot_create_nodesConfig-version.cmake" "DESTINATION" "share/irobot_create_nodes/cmake")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_core/irobot_create_nodesConfig.cmake" "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes/ament_cmake_core/irobot_create_nodesConfig-version.cmake" "DESTINATION" "share/irobot_create_nodes/cmake")
+
+# install(FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes/package.xml" "DESTINATION" "share/irobot_create_nodes")
+ament_cmake_symlink_install_files("/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes" FILES "/home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes/package.xml" "DESTINATION" "share/irobot_create_nodes")

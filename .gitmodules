@@ -1,0 +1,3 @@
+[submodule "irobot_ws/src/create3_sim"]
+	path = irobot_ws/src/create3_sim
+	url = git@github.com:iRobotEducation/create3_sim.git

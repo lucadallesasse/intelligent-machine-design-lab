@@ -1,18 +1,19 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Create3Hmi.hh'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.3)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../../../../../src/create3_sim/irobot_create_ignition/irobot_create_ignition_plugins/Create3Hmi/Create3Hmi.hh"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'Create3Hmi.hh' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#error "This file was generated using the moc from 5.15.3. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -94,7 +95,7 @@ void ignition::gui::Create3Hmi::qt_static_metacall(QObject *_o, QMetaObject::Cal
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<Create3Hmi *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
         case 0: _t->NamespaceChanged(); break;
         case 1: _t->SetNamespace((*reinterpret_cast< const QString(*)>(_a[1]))); break;
@@ -116,7 +117,7 @@ void ignition::gui::Create3Hmi::qt_static_metacall(QObject *_o, QMetaObject::Cal
 #ifndef QT_NO_PROPERTIES
     else if (_c == QMetaObject::ReadProperty) {
         auto *_t = static_cast<Create3Hmi *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast< QString*>(_v) = _t->Namespace(); break;
@@ -124,7 +125,7 @@ void ignition::gui::Create3Hmi::qt_static_metacall(QObject *_o, QMetaObject::Cal
         }
     } else if (_c == QMetaObject::WriteProperty) {
         auto *_t = static_cast<Create3Hmi *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         void *_v = _a[0];
         switch (_id) {
         case 0: _t->SetNamespace(*reinterpret_cast< QString*>(_v)); break;
@@ -136,7 +137,7 @@ void ignition::gui::Create3Hmi::qt_static_metacall(QObject *_o, QMetaObject::Cal
 }
 
 QT_INIT_METAOBJECT const QMetaObject ignition::gui::Create3Hmi::staticMetaObject = { {
-    &Plugin::staticMetaObject,
+    QMetaObject::SuperData::link<Plugin::staticMetaObject>(),
     qt_meta_stringdata_ignition__gui__Create3Hmi.data,
     qt_meta_data_ignition__gui__Create3Hmi,
     qt_static_metacall,

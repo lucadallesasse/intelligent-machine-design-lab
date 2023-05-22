@@ -1,8 +1,8 @@
-# Install script for directory: /home/lucads/irobot_ws/src/create3_sim/irobot_create_ignition/irobot_create_ignition_plugins
+# Install script for directory: /home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_ignition/irobot_create_ignition_plugins
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lucads/irobot_ws/install/irobot_create_ignition_plugins")
+  set(CMAKE_INSTALL_PREFIX "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,13 +37,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+endif()
+
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/lucads/irobot_ws/build/irobot_create_ignition_plugins/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_plugins/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lucads/irobot_ws/build/irobot_create_ignition_plugins/Create3Hmi/cmake_install.cmake")
+  include("/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_plugins/Create3Hmi/cmake_install.cmake")
 
 endif()
 
@@ -55,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lucads/irobot_ws/build/irobot_create_ignition_plugins/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_plugins/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

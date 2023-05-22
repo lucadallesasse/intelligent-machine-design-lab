@@ -1,1 +1,0 @@
-/home/lucads/irobot_ws/build/robot_traj/ament_cmake_core/robot_trajConfig-version.cmake

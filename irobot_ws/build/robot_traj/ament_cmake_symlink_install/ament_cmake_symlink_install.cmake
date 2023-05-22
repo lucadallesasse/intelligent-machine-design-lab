@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/lucads/irobot_ws/install/robot_traj/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/robot_traj/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/lucads/irobot_ws/install/robot_traj/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/robot_traj/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/lucads/irobot_ws/install/robot_traj/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/robot_traj/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/lucads/irobot_ws/install/robot_traj/${destination}")
+      set(destination "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/robot_traj/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")

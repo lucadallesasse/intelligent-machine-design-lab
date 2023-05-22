@@ -1,8 +1,8 @@
-# Install script for directory: /home/lucads/irobot_ws/src/create3_sim/irobot_create_ignition/irobot_create_ignition_plugins/Create3Hmi
+# Install script for directory: /home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_ignition/irobot_create_ignition_plugins/Create3Hmi
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lucads/irobot_ws/install/irobot_create_ignition_plugins")
+  set(CMAKE_INSTALL_PREFIX "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_plugins")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,5 +35,10 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 

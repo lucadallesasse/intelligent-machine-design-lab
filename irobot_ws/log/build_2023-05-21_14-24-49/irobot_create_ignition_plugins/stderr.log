@@ -1,4 +1,0 @@
-CMake Warning at CMakeLists.txt:19 (message):
-  Ignition not found.  Skipping irobot_create_ignition_plugins package.
-
-

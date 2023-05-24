@@ -1,0 +1,57 @@
+[0.014s] Invoking command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes': AMENT_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/opt/ros/humble LD_LIBRARY_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes
+[0.055s] -- The C compiler identification is GNU 11.3.0
+[0.100s] -- The CXX compiler identification is GNU 11.3.0
+[0.106s] -- Detecting C compiler ABI info
+[0.157s] -- Detecting C compiler ABI info - done
+[0.164s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.164s] -- Detecting C compile features
+[0.165s] -- Detecting C compile features - done
+[0.167s] -- Detecting CXX compiler ABI info
+[0.226s] -- Detecting CXX compiler ABI info - done
+[0.234s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.234s] -- Detecting CXX compile features
+[0.234s] -- Detecting CXX compile features - done
+[0.236s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.385s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.439s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.465s] -- Found angles: 1.15.0 (/opt/ros/humble/share/angles/cmake)
+[0.467s] -- Found control_msgs: 4.1.1 (/opt/ros/humble/share/control_msgs/cmake)
+[0.500s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.504s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.511s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.524s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.541s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.116s] -- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.206s] -- Found irobot_create_msgs: 2.1.0 (/opt/ros/humble/share/irobot_create_msgs/cmake)
+[1.357s] -- Found irobot_create_toolbox: 2.0.0 (/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox/share/irobot_create_toolbox/cmake)
+[1.424s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.428s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.516s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.544s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.590s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.599s] -- Looking for pthread.h
+[1.653s] -- Looking for pthread.h - found
+[1.654s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.708s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.710s] -- Found Threads: TRUE  
+[1.863s] -- Found rclcpp_action: 16.0.4 (/opt/ros/humble/share/rclcpp_action/cmake)
+[1.895s] -- Found rclcpp_components: 16.0.4 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.971s] -- Found tf2: 0.25.2 (/opt/ros/humble/share/tf2/cmake)
+[1.979s] -- Found tf2_geometry_msgs: 0.25.2 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.992s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.994s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.994s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.221s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0")  
+[2.311s] -- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.384s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.385s] -- Configured cppcheck include dirs: /home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_common/irobot_create_nodes/include
+[2.385s] -- Configured cppcheck exclude dirs and/or files: 
+[2.386s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.386s] -- Configured cpplint exclude dirs and/or files: 
+[2.387s] -- Added test 'lint_cmake' to check CMake code style
+[2.388s] -- Added test 'uncrustify' to check C / C++ code style
+[2.388s] -- Configured uncrustify additional arguments: 
+[2.389s] -- Added test 'xmllint' to check XML markup files
+[2.391s] -- Configuring done
+[2.486s] -- Generating done
+[2.489s] -- Build files have been written to: /home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_nodes

@@ -15,7 +15,7 @@ public:
 
   {
     // Create the subscriber to receive the input message
-    subscriber1 = this->create_subscription<robot_traj::msg::target>("target_pose", rclcpp::SensorDataQoS(), std::bind(&InterpolatorNode::messageCallback, this, std::placeholders::_1));
+    subscriber1 = this->create_subscription<robot_traj::msg::target>("/target_pose", rclcpp::SensorDataQoS(), std::bind(&InterpolatorNode::messageCallback, this, std::placeholders::_1));
     // Subscriber to get to receive odometry information
     subscriber2 = node->create_subscription<nav_msgs::msg::Odometry>("/odom", 10, odomCallback);
 

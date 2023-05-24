@@ -1,0 +1,30 @@
+[  5%] [32mBuilding CXX object CMakeFiles/gazebo_ros_create_helpers.dir/src/gazebo_ros_helpers.cpp.o[0m
+[ 10%] [32m[1mLinking CXX shared library libgazebo_ros_create_helpers.so[0m
+[ 10%] Built target gazebo_ros_create_helpers
+[ 15%] [32mBuilding CXX object CMakeFiles/gazebo_ros_create_cliff_sensor.dir/src/gazebo_ros_cliff_sensor.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/gazebo_ros_create_bumper.dir/src/gazebo_ros_bumper.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/gazebo_ros_create_imu.dir/src/gazebo_ros_imu.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/gazebo_ros_create_docking_status.dir/src/gazebo_ros_docking_status.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/gazebo_ros_create_ir_intensity_sensor.dir/src/gazebo_ros_ir_intensity_sensor.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/gazebo_ros_create_optical_mouse.dir/src/gazebo_ros_optical_mouse.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/docking_manager.dir/src/docking_manager.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/gazebo_ros_create_wheel_drop.dir/src/gazebo_ros_wheel_drop.cpp.o[0m
+[ 55%] [32m[1mLinking CXX shared library libdocking_manager.so[0m
+[ 55%] Built target docking_manager
+[ 60%] [32m[1mLinking CXX shared library libgazebo_ros_create_ir_intensity_sensor.so[0m
+[ 65%] [32m[1mLinking CXX shared library libgazebo_ros_create_imu.so[0m
+[ 70%] [32m[1mLinking CXX shared library libgazebo_ros_create_optical_mouse.so[0m
+[ 70%] Built target gazebo_ros_create_ir_intensity_sensor
+[ 75%] [32m[1mLinking CXX shared library libgazebo_ros_create_wheel_drop.so[0m
+[ 75%] Built target gazebo_ros_create_imu
+[ 75%] Built target gazebo_ros_create_wheel_drop
+[ 75%] Built target gazebo_ros_create_optical_mouse
+[ 80%] [32m[1mLinking CXX shared library libgazebo_ros_create_cliff_sensor.so[0m
+[ 85%] [32m[1mLinking CXX shared library libgazebo_ros_create_bumper.so[0m
+[ 85%] Built target gazebo_ros_create_cliff_sensor
+[ 85%] Built target gazebo_ros_create_bumper
+[ 90%] [32m[1mLinking CXX shared library libgazebo_ros_create_docking_status.so[0m
+[ 90%] Built target gazebo_ros_create_docking_status
+[ 95%] [32mBuilding CXX object CMakeFiles/gazebo_ros_create_ir_opcode.dir/src/gazebo_ros_ir_opcode.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libgazebo_ros_create_ir_opcode.so[0m
+[100%] Built target gazebo_ros_create_ir_opcode

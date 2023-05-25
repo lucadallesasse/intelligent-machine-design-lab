@@ -1,4 +1,0 @@
-[31mCMake Error at CMakeLists.txt:20 (ament_auto_generate_messages):
-  Unknown CMake command "ament_auto_generate_messages".
-
-[0m

@@ -1,4 +1,0 @@
-[0.027s] Invoking command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_toolbox': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_toolbox -- -j12 -l12
-[0.059s] [ 50%] [32mBuilding CXX object CMakeFiles/irobot_create_toolbox.dir/src/polar_coordinates.cpp.o[0m
-[2.142s] [100%] [32m[1mLinking CXX shared library libirobot_create_toolbox.so[0m
-[2.279s] [100%] Built target irobot_create_toolbox

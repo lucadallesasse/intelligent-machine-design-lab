@@ -1,8 +1,0 @@
-[ 16%] [34m[1mAutomatic MOC for target Create3Hmi[0m
-[ 16%] Built target Create3Hmi_autogen
-[ 33%] [34m[1mGenerating qrc_Create3Hmi.cpp[0m
-[ 83%] [32mBuilding CXX object Create3Hmi/CMakeFiles/Create3Hmi.dir/Create3Hmi_autogen/mocs_compilation.cpp.o[0m
-[ 83%] [32mBuilding CXX object Create3Hmi/CMakeFiles/Create3Hmi.dir/Create3Hmi.cc.o[0m
-[ 83%] [32mBuilding CXX object Create3Hmi/CMakeFiles/Create3Hmi.dir/qrc_Create3Hmi.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library libCreate3Hmi.so[0m
-[100%] Built target Create3Hmi

@@ -1,1 +1,0 @@
-Invoking command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_plugins': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_plugins -- -j12 -l12

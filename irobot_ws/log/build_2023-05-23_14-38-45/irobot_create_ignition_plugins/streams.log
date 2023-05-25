@@ -1,9 +1,0 @@
-[0.017s] Invoking command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_plugins': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_plugins -- -j12 -l12
-[0.049s] [ 16%] [34m[1mAutomatic MOC for target Create3Hmi[0m
-[1.253s] [ 16%] Built target Create3Hmi_autogen
-[1.259s] [ 33%] [34m[1mGenerating qrc_Create3Hmi.cpp[0m
-[1.277s] [ 83%] [32mBuilding CXX object Create3Hmi/CMakeFiles/Create3Hmi.dir/Create3Hmi_autogen/mocs_compilation.cpp.o[0m
-[1.277s] [ 83%] [32mBuilding CXX object Create3Hmi/CMakeFiles/Create3Hmi.dir/Create3Hmi.cc.o[0m
-[1.277s] [ 83%] [32mBuilding CXX object Create3Hmi/CMakeFiles/Create3Hmi.dir/qrc_Create3Hmi.cpp.o[0m
-[7.806s] [100%] [32m[1mLinking CXX shared library libCreate3Hmi.so[0m
-[8.117s] [100%] Built target Create3Hmi

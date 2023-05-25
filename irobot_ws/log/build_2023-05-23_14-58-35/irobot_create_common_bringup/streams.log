@@ -1,9 +1,0 @@
-[0.017s] Invoking command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_common_bringup': AMENT_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:/opt/ros/humble LD_LIBRARY_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_common_bringup -- -j12 -l12
-[0.055s] Built target ament_cmake_python_symlink_irobot_create_common_bringup
-[0.315s] running egg_info
-[0.316s] writing irobot_create_common_bringup.egg-info/PKG-INFO
-[0.316s] writing dependency_links to irobot_create_common_bringup.egg-info/dependency_links.txt
-[0.316s] writing top-level names to irobot_create_common_bringup.egg-info/top_level.txt
-[0.318s] reading manifest file 'irobot_create_common_bringup.egg-info/SOURCES.txt'
-[0.318s] writing manifest file 'irobot_create_common_bringup.egg-info/SOURCES.txt'
-[0.338s] Built target ament_cmake_python_build_irobot_create_common_bringup_egg

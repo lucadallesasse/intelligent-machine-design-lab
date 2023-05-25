@@ -1,4 +1,0 @@
-ros2 topic pub --once /target_pose target '{target_pose: {x: 1.0, y: 1.0, z: 0.0}, target_orientation: 0.5}'
-
-
-reference:https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html

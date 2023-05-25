@@ -1,141 +1,145 @@
-#include "rclcpp/rclcpp.h"
+#include "rclcpp/rclcpp.hpp"
 #include <cmath>
-#include "robot_traj/msg/target.h" 
-#include <nav_msgs/Odometry.h>
-#include <std_msgs/Float64.h>
+#include "custom_msg/msg/target.hpp" 
+#include <nav_msgs/msg/odometry.hpp>
+#include <std_msgs/msg/float64.hpp>
 #include "geometry_msgs/msg/twist.hpp"
 #include "tf2/LinearMath/Quaternion.h"
 #include "tf2/LinearMath/Matrix3x3.h"
+#include "geometry_msgs/msg/pose2_d.hpp"
+#include <unistd.h>
+#include <chrono>
 
+
+#define MAX_LIN_VEL 0.2
+#define MAX_ANG_VEL 0.8
 
 class InterpolatorNode : public rclcpp::Node
 {
 public:
-  InterpolatorNode() : Node("draw_traj")
+  InterpolatorNode() : Node("draw_traj")  
 
   {
     // Create the subscriber to receive the input message
-    subscriber1 = this->create_subscription<robot_traj::msg::target>("/target_pose", rclcpp::SensorDataQoS(), std::bind(&InterpolatorNode::messageCallback, this, std::placeholders::_1));
-    // Subscriber to get to receive odometry information
-    subscriber2 = node->create_subscription<nav_msgs::msg::Odometry>("/odom", 10, odomCallback);
+    subscriber = this->create_subscription<custom_msg::msg::Target>("/target_pose", rclcpp::SensorDataQoS(), std::bind(&InterpolatorNode::targetPoseCallback, this, std::placeholders::_1));
 
     // Create a publisher for the cmd_vel topic
     publisher = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 1);
+
+    // Initialize robot's current pose and orientation 
+    current_pose_.x = 0.0; 
+    current_pose_.y = 0.0; 
+    current_pose_.theta = 0.0; 
+
+    // Set the desired symbol drawing speed 
+    linear_velocity_ = MAX_LIN_VEL;   // Adjust the linear velocity as per your requirements 
+    angular_velocity_ = MAX_ANG_VEL;  // Adjust the angular velocity as per your requirements 
+
+    // Initialize the flag indicating if the target pose has been reached 
+    target_reached_ = false; 
   }
 
 private:
-  void odomCallback(const nav_msgs::msg::Odometry::SharedPtr msg)
-  {
-    // Retrieve position
-    double current_x = msg->pose.pose.position.x;
-    double current_y = msg->pose.pose.position.y;
-    double current_z = msg->pose.pose.position.z;
 
-    // Retrieve orientation
-    double qx = msg->pose.pose.orientation.x;
-    double qy = msg->pose.pose.orientation.y;
-    double qz = msg->pose.pose.orientation.z;
-    double qw = msg->pose.pose.orientation.w;
+  void targetPoseCallback(const custom_msg::msg::Target::SharedPtr msg) 
+  { 
+    target_reached_ = false;
 
-    tf2::Quaternion quaternion(qx, qy, qz, qw);
-    tf2::Matrix3x3 matrix(quaternion);
+    if (!target_reached_) 
+    { 
+      // Calculate the interpolation path 
+      double target_x = msg->target_pose.x; 
+      double target_y = msg->target_pose.y; 
+      double target_theta = (msg->target_orientation)/180*M_PI; 
 
-    double roll, pitch, yaw;
-    matrix.getRPY(roll, pitch, yaw);
+      double distance = std::hypot(target_x - current_pose_.x, target_y - current_pose_.y); 
+      double duration_trans = abs(distance / linear_velocity_); 
+      double rotation = atan2(target_y - current_pose_.y, target_x - current_pose_.x);
+      double duration_rot = abs(rotation / angular_velocity_); 
 
-    // Print the position and orientation
-    RCLCPP_INFO(rclcpp::get_logger("odom_listener"), "Position: (%f, %f, %f)", x, y, z);
-  }
-
-  void messageCallback(const robot_traj::msg::target::SharedPtr msg)
-  {
-    // Store the target pose and orientation angle from the input message
-    double target_x = msg->target_pose->x;
-    double target_y = msg->target_pose->y;
-    double target_orientation = msg->target_orientation;
-
-    double dx = target_x - current_x;
-    double dy = target_y - current_y;
-
-    // Compute the distance and angle to the target pose
-    double distance = std::sqrt(dx * dx + dy * dy);
-    double angle = target_orientation - yaw;
-
-    if(distance >= 0.01){
-      publishLinearVelocites(true);
-    }else{
-      publishLinearVelocites(false);
-    }
-
-    if(angle >= 0.01){
-      publishAngularVelocites(true);
-    }else{
-      publishAngularVelocites(false);
-    }
-  }
-
-  void publishLinearVelocites(bool check)
-  {
-    // Create a Twist message and populate it with the desired values
-    twist_msg = std::make_shared<geometry_msgs::msg::Twist>();
-    
-    if(check == true){
-      //Calculate the linear velocities
-      float64 vx = linear_vel;
-      float64 vy = linear_vel;
-      float64 vz = 0.0f;
+      // Turn the robot in the direction of the target point
+      if((target_x != 0.0) | (target_y != 0.0)){ 
+        turn(rotation,duration_rot); 
+      }
       
-      twist_msg->linear.x = vx;  // Set the linear velocity along the x-axis
-      twist_msg->linear.y = vy;  // Set the linear velocity along the y-axis
-      twist_msg->linear.z = vz;  // Set the linear velocity along the z-axis  
-    }else{
-      twist_msg->linear.x = 0.0f;  // Set the linear velocity along the x-axis
-      twist_msg->linear.y = 0.0f;  // Set the linear velocity along the y-axis
-      twist_msg->linear.z = 0.0f;  // Set the linear velocity along the z-axis
-    }  
+      // Move in a straight line to the target pose 
+      if((target_x != 0.0) | (target_y != 0.0)){
+        moveStraight(distance, duration_trans); 
+      }
 
-    twist_msg->angular.x = 0.0f; // Set the angular velocity around the x-axis
-    twist_msg->angular.y = 0.0f; // Set the angular velocity around the y-axis
-    twist_msg->angular.z = 0.0f; // Set the angular velocity around the z-axis
+      // Turn to the desired orientation 
+      double rotation_final = target_theta - rotation;
+      double duration_rot2 = abs(rotation_final / angular_velocity_); 
+      turn(rotation_final,duration_rot2); 
 
-    // Publish the Twist message repeatedly
-    publisher->publish(twist_msg);
-  }
+      // Set the target reached flag to true 
+      target_reached_ = true; 
+    } 
+  } 
+  
 
-  void publishAngularVelocites(bool check)
-  {
-    // Create a Twist message and populate it with the desired values
-    rotated_twist_msg = std::make_shared<geometry_msgs::msg::Twist>();
-    rotated_twist_msg->linear.x = 0.0f;  // Set the linear velocity along the x-axis
-    rotated_twist_msg->linear.y = 0.0f;  // Set the linear velocity along the y-axis
-    rotated_twist_msg->linear.z = 0.0f;  // Set the linear velocity along the z-axis
+  void moveStraight(double distance, double duration) 
+  { 
+    double linear_vel_x = distance / duration; 
 
-    if(check == true){
-      //Calculate the angular velocities
-      float64 wx = 0.0f;
-      float64 wy = 0.0f;
-      float64 wz = angular_vel;
+    // Publish the linear velocity commands
+    auto twist_msg = std::make_unique<geometry_msgs::msg::Twist>(); 
+    twist_msg->linear.x = linear_vel_x; 
+    
+    double elapsed_time = 0.0; 
 
-      rotated_twist_msg->angular.x = wx; // Set the angular velocity around the x-axis
-      rotated_twist_msg->angular.y = wy; // Set the angular velocity around the y-axis
-      rotated_twist_msg->angular.z = wz; // Set the angular velocity around the z-axis
-    }else{
-      rotated_twist_msg->angular.x = 0.0f; // Set the angular velocity around the x-axis
-      rotated_twist_msg->angular.y = 0.0f; // Set the angular velocity around the y-axis
-      rotated_twist_msg->angular.z = 0.0f; // Set the angular velocity around the z-axis
-    }
+    while (elapsed_time <= duration*std::pow(10, 6)) 
+    { 
+      auto start = std::chrono::high_resolution_clock::now();
+      publisher->publish(*twist_msg); 
+      usleep(200);
+      auto end = std::chrono::high_resolution_clock::now();
+      
+      std::chrono::duration<double, std::micro> duration = end - start;
+      elapsed_time += duration.count(); 
+    } 
 
-    // Publish the Twist message repeatedly
-    publisher->publish(twist_msg);
-  }
+    // Stop the robot after reaching the target pose 
+    twist_msg->linear.x = 0.0; 
+    publisher->publish(*twist_msg); 
+  } 
+
+  void turn(double target_theta, double duration) 
+  { 
+    double angular_vel_z = target_theta / duration; 
+  
+    // Publish the angular velocity commands until the desired orientation is reached 
+    auto twist_msg = std::make_unique<geometry_msgs::msg::Twist>(); 
+    twist_msg->angular.z = angular_vel_z; 
+
+    double elapsed_time = 0.0; 
+
+    while (elapsed_time <= duration*std::pow(10, 6)) 
+    { 
+      auto start = std::chrono::high_resolution_clock::now();
+      publisher->publish(*twist_msg); 
+      usleep(200);
+      auto end = std::chrono::high_resolution_clock::now();
+      
+      std::chrono::duration<double, std::micro> duration = end - start;
+      elapsed_time += duration.count();
+    } 
+
+    // Stop the robot after reaching the desired orientation 
+    twist_msg->angular.z = 0.0; 
+    publisher->publish(*twist_msg); 
+  
+  } 
 
   private:
-  rclcpp::Subscription<obot_traj::msg::target>::SharedPtr subscriber1;
-  rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr subscriber2;
+  rclcpp::Subscription<custom_msg::msg::Target>::SharedPtr subscriber;
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher;
-  const double step_size_ = 0.1; // Interpolation step size (adjust as needed)
-  const float64 linear_vel = 1;
-  const float64 angular_vel = 1;
+
+  bool target_reached_; 
+  geometry_msgs::msg::Pose2D current_pose_; 
+  double linear_velocity_; 
+  double angular_velocity_; 
+
 };
 
 
@@ -146,3 +150,9 @@ int main(int argc, char** argv)
   rclcpp::shutdown();
   return 0;
 }
+
+
+  
+
+
+ 

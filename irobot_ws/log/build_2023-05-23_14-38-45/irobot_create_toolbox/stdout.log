@@ -1,3 +1,0 @@
-[ 50%] [32mBuilding CXX object CMakeFiles/irobot_create_toolbox.dir/src/polar_coordinates.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library libirobot_create_toolbox.so[0m
-[100%] Built target irobot_create_toolbox

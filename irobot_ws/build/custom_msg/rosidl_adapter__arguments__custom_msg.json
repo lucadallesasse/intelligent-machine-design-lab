@@ -1,0 +1,6 @@
+{
+  "package_name": "custom_msg",
+  "non_idl_tuples": [
+    "/home/lucads/intelligent-machine-design-lab/irobot_ws/src/custom_msg:msg/Target.msg"
+  ]
+}

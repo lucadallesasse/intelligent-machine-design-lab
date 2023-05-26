@@ -1,0 +1,136 @@
+[0.010s] Invoking command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_gazebo_bringup': AMENT_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:/opt/ros/humble LD_LIBRARY_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_gazebo/irobot_create_gazebo_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup
+[0.051s] -- The C compiler identification is GNU 11.3.0
+[0.096s] -- The CXX compiler identification is GNU 11.3.0
+[0.102s] -- Detecting C compiler ABI info
+[0.153s] -- Detecting C compiler ABI info - done
+[0.161s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.162s] -- Detecting C compile features
+[0.162s] -- Detecting C compile features - done
+[0.165s] -- Detecting CXX compiler ABI info
+[0.225s] -- Detecting CXX compiler ABI info - done
+[0.232s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.233s] -- Detecting CXX compile features
+[0.233s] -- Detecting CXX compile features - done
+[0.235s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.377s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.426s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.520s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.523s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.530s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.541s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.557s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.621s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.624s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.703s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.727s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.768s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.778s] -- Looking for pthread.h
+[0.831s] -- Looking for pthread.h - found
+[0.832s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.888s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.889s] -- Found Threads: TRUE  
+[1.062s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[1.063s] -- Checking for module 'bullet>=2.82'
+[1.070s] --   Found bullet, version 3.05
+[1.134s] -- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+[1.162s] -- Found assimp: /usr/include (found version "5.2.0") 
+[1.183s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[1.211s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[1.229s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[1.234s] -- Looking for ignition-math6 -- found version 6.14.0
+[1.242s] -- Searching for dependencies of ignition-math6
+[1.244s] -- Looking for OGRE...
+[1.244s] -- OGRE_PREFIX_WATCH changed.
+[1.247s] -- Checking for module 'OGRE'
+[1.255s] --   Found OGRE, version 1.9.0
+[1.275s] -- Found Ogre Ghadamon (1.9.0)
+[1.282s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[1.291s] -- Looking for OGRE_Paging...
+[1.296s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[1.297s] -- Looking for OGRE_Terrain...
+[1.302s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[1.302s] -- Looking for OGRE_Property...
+[1.307s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[1.307s] -- Looking for OGRE_RTShaderSystem...
+[1.312s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[1.312s] -- Looking for OGRE_Volume...
+[1.317s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[1.317s] -- Looking for OGRE_Overlay...
+[1.322s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[1.430s] -- Looking for ignition-math6 -- found version 6.14.0
+[1.434s] -- Looking for ignition-transport8 -- found version 8.2.1
+[1.434s] -- Searching for dependencies of ignition-transport8
+[1.450s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[1.460s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[1.464s] -- Checking for module 'libzmq >= 4'
+[1.473s] --   Found libzmq , version 4.3.4
+[1.495s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[1.499s] -- Checking for module 'uuid'
+[1.507s] --   Found uuid, version 2.37.2
+[1.526s] -- Found UUID: TRUE  
+[1.528s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.529s] -- Searching for dependencies of ignition-msgs5
+[1.546s] -- Looking for ignition-math6 -- found version 6.14.0
+[1.549s] -- Checking for module 'tinyxml2'
+[1.557s] --   Found tinyxml2, version 9.0.0
+[1.578s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.581s] -- Looking for ignition-common3 -- found version 3.14.0
+[1.581s] -- Searching for dependencies of ignition-common3
+[1.582s] -- Looking for dlfcn.h - found
+[1.583s] -- Looking for libdl - found
+[1.584s] -- Found DL: TRUE  
+[1.593s] -- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+[1.594s] -- Searching for <ignition-common3> component [graphics]
+[1.596s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[1.596s] -- Searching for dependencies of ignition-common3-graphics
+[1.596s] -- Looking for ignition-math6 -- found version 6.14.0
+[1.599s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[1.600s] -- Searching for dependencies of ignition-fuel_tools4
+[1.654s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[1.662s] -- Checking for module 'jsoncpp'
+[1.670s] --   Found jsoncpp, version 1.9.5
+[1.690s] -- Found JSONCPP: TRUE  
+[1.694s] -- Checking for module 'libzip'
+[1.702s] --   Found libzip, version 1.7.3
+[1.721s] -- Found ZIP: TRUE  
+[1.722s] -- Looking for ignition-common3 -- found version 3.14.0
+[1.722s] -- Looking for ignition-math6 -- found version 6.14.0
+[1.722s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.726s] -- Gazebo version: 11.10
+[1.726s] -- Checking for module 'tbb'
+[1.734s] --   Found tbb, version 2021.5.0
+[1.763s] -- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.836s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.837s] -- Added test 'lint_cmake' to check CMake code style
+[1.837s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.838s] -- Added test 'xmllint' to check XML markup files
+[1.839s] -- Configuring done
+[1.843s] -- Generating done
+[1.845s] -- Build files have been written to: /home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_gazebo_bringup
+[1.855s] Invoked command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_gazebo_bringup' returned '0': AMENT_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:/opt/ros/humble LD_LIBRARY_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/lucads/intelligent-machine-design-lab/irobot_ws/src/create3_sim/irobot_create_gazebo/irobot_create_gazebo_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup
+[1.856s] Invoking command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_gazebo_bringup': AMENT_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:/opt/ros/humble LD_LIBRARY_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_gazebo_bringup -- -j12 -l12
+[1.884s] Invoked command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_gazebo_bringup' returned '0': AMENT_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:/opt/ros/humble LD_LIBRARY_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_gazebo_bringup -- -j12 -l12
+[1.899s] Invoking command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_gazebo_bringup': AMENT_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:/opt/ros/humble LD_LIBRARY_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_gazebo_bringup
+[1.903s] -- Install configuration: ""
+[1.904s] -- Execute custom install script
+[1.904s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/config/gazebo_params.yaml
+[1.910s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/launch/create3_gazebo.launch.py
+[1.917s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/launch/create3_gazebo_aws_small.launch.py
+[1.924s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/launch/create3_spawn.launch.py
+[1.932s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/launch/gazebo.launch.py
+[1.940s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/ament_index/resource_index/package_run_dependencies/irobot_create_gazebo_bringup
+[1.948s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/ament_index/resource_index/parent_prefix_path/irobot_create_gazebo_bringup
+[1.956s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/environment/ament_prefix_path.sh
+[1.964s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/environment/ament_prefix_path.dsv
+[1.972s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/environment/path.sh
+[1.980s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/environment/path.dsv
+[1.988s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/local_setup.bash
+[1.995s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/local_setup.sh
+[2.003s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/local_setup.zsh
+[2.011s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/local_setup.dsv
+[2.019s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/package.dsv
+[2.027s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/ament_index/resource_index/packages/irobot_create_gazebo_bringup
+[2.034s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/cmake/irobot_create_gazebo_bringupConfig.cmake
+[2.042s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/cmake/irobot_create_gazebo_bringupConfig-version.cmake
+[2.050s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_bringup/share/irobot_create_gazebo_bringup/package.xml
+[2.062s] Invoked command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_gazebo_bringup' returned '0': AMENT_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_description:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_control:/opt/ros/humble LD_LIBRARY_PATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_gazebo_plugins/lib:/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_toolbox/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_common_bringup/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_gazebo_bringup

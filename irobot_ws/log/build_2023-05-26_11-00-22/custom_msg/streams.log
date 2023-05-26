@@ -1,0 +1,202 @@
+[0.015s] Invoking command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lucads/intelligent-machine-design-lab/irobot_ws/src/custom_msg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg
+[0.058s] -- The C compiler identification is GNU 11.3.0
+[0.102s] -- The CXX compiler identification is GNU 11.3.0
+[0.109s] -- Detecting C compiler ABI info
+[0.159s] -- Detecting C compiler ABI info - done
+[0.166s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.166s] -- Detecting C compile features
+[0.167s] -- Detecting C compile features - done
+[0.169s] -- Detecting CXX compiler ABI info
+[0.227s] -- Detecting CXX compiler ABI info - done
+[0.235s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.235s] -- Detecting CXX compile features
+[0.235s] -- Detecting CXX compile features - done
+[0.237s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.385s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.443s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.469s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.508s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.514s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.523s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.538s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.562s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.700s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.967s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.326s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.469s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.489s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.6", minimum required is "3.6") 
+[1.490s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.514s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.6", minimum required is "3.5") 
+[1.514s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.514s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.514s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.531s] -- Found PythonExtra: .so  
+[1.584s] -- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.600s] -- Added test 'lint_cmake' to check CMake code style
+[1.601s] -- Added test 'xmllint' to check XML markup files
+[1.604s] -- Configuring done
+[1.632s] -- Generating done
+[1.634s] -- Build files have been written to: /home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg
+[1.642s] Invoked command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lucads/intelligent-machine-design-lab/irobot_ws/src/custom_msg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg
+[1.643s] Invoking command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg -- -j12 -l12
+[1.669s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.676s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.681s] [  6%] Built target ament_cmake_python_symlink_custom_msg
+[1.898s] [  6%] Built target custom_msg__cpp
+[1.908s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.908s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.910s] [ 16%] [32mBuilding C object CMakeFiles/custom_msg__rosidl_generator_c.dir/rosidl_generator_c/custom_msg/msg/detail/target__functions.c.o[0m
+[1.911s] [ 19%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.941s] running egg_info
+[1.942s] creating custom_msg.egg-info
+[1.942s] writing custom_msg.egg-info/PKG-INFO
+[1.943s] writing dependency_links to custom_msg.egg-info/dependency_links.txt
+[1.943s] writing top-level names to custom_msg.egg-info/top_level.txt
+[1.943s] writing manifest file 'custom_msg.egg-info/SOURCES.txt'
+[1.946s] reading manifest file 'custom_msg.egg-info/SOURCES.txt'
+[1.947s] writing manifest file 'custom_msg.egg-info/SOURCES.txt'
+[1.964s] [ 22%] [32m[1mLinking C shared library libcustom_msg__rosidl_generator_c.so[0m
+[2.001s] [ 22%] Built target ament_cmake_python_build_custom_msg_egg
+[2.011s] [ 22%] Built target custom_msg__rosidl_generator_c
+[2.023s] [ 29%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.023s] [ 29%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.027s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.212s] [ 35%] [32mBuilding CXX object CMakeFiles/custom_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_msg/msg/detail/dds_fastrtps/target__type_support.cpp.o[0m
+[2.277s] [ 38%] [32mBuilding CXX object CMakeFiles/custom_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_msg/msg/target__type_support.cpp.o[0m
+[2.306s] [ 41%] [32m[1mLinking CXX shared library libcustom_msg__rosidl_typesupport_c.so[0m
+[2.359s] [ 41%] Built target custom_msg__rosidl_typesupport_c
+[2.366s] [ 45%] [32mBuilding CXX object CMakeFiles/custom_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_msg/msg/target__type_support.cpp.o[0m
+[2.381s] [ 48%] [32mBuilding CXX object CMakeFiles/custom_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_msg/msg/detail/target__type_support.cpp.o[0m
+[2.511s] [ 51%] [32mBuilding CXX object CMakeFiles/custom_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_msg/msg/detail/target__type_support_c.cpp.o[0m
+[2.519s] [ 54%] [32mBuilding C object CMakeFiles/custom_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_msg/msg/detail/target__type_support.c.o[0m
+[2.575s] [ 58%] [32m[1mLinking C shared library libcustom_msg__rosidl_typesupport_introspection_c.so[0m
+[2.624s] [ 58%] Built target custom_msg__rosidl_typesupport_introspection_c
+[2.678s] [ 61%] [32m[1mLinking CXX shared library libcustom_msg__rosidl_typesupport_cpp.so[0m
+[2.681s] [ 64%] [32m[1mLinking CXX shared library libcustom_msg__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.726s] [ 64%] Built target custom_msg__rosidl_typesupport_cpp
+[2.800s] [ 64%] Built target custom_msg__rosidl_typesupport_fastrtps_cpp
+[2.866s] [ 67%] [32m[1mLinking CXX shared library libcustom_msg__rosidl_typesupport_introspection_cpp.so[0m
+[2.906s] [ 70%] [32m[1mLinking CXX shared library libcustom_msg__rosidl_typesupport_fastrtps_c.so[0m
+[2.949s] [ 70%] Built target custom_msg__rosidl_typesupport_introspection_cpp
+[3.017s] [ 70%] Built target custom_msg__rosidl_typesupport_fastrtps_c
+[3.037s] [ 70%] Built target custom_msg
+[3.056s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.332s] [ 74%] Built target custom_msg__py
+[3.345s] [ 77%] [32mBuilding C object CMakeFiles/custom_msg__rosidl_generator_py.dir/rosidl_generator_py/custom_msg/msg/_target_s.c.o[0m
+[3.444s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/custom_msg/libcustom_msg__rosidl_generator_py.so[0m
+[3.480s] [ 80%] Built target custom_msg__rosidl_generator_py
+[3.497s] [ 90%] [32mBuilding C object CMakeFiles/custom_msg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/custom_msg/_custom_msg_s.ep.rosidl_typesupport_c.c.o[0m
+[3.497s] [ 90%] [32mBuilding C object CMakeFiles/custom_msg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/custom_msg/_custom_msg_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.497s] [ 90%] [32mBuilding C object CMakeFiles/custom_msg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/custom_msg/_custom_msg_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.582s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/custom_msg/custom_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.582s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/custom_msg/custom_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.582s] [100%] [32m[1mLinking C shared library rosidl_generator_py/custom_msg/custom_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.615s] [100%] Built target custom_msg__rosidl_typesupport_c__pyext
+[3.615s] [100%] Built target custom_msg__rosidl_typesupport_introspection_c__pyext
+[3.615s] [100%] Built target custom_msg__rosidl_typesupport_fastrtps_c__pyext
+[3.623s] Invoked command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg -- -j12 -l12
+[3.657s] Invoking command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg
+[3.663s] -- Install configuration: ""
+[3.663s] -- Execute custom install script
+[3.664s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/ament_index/resource_index/rosidl_interfaces/custom_msg
+[3.671s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/detail/target__functions.h
+[3.677s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/detail/target__struct.h
+[3.683s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/detail/target__type_support.h
+[3.690s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/rosidl_generator_c__visibility_control.h
+[3.697s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/target.h
+[3.704s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/environment/library_path.sh
+[3.711s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/environment/library_path.dsv
+[3.719s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/detail/target__rosidl_typesupport_fastrtps_c.h
+[3.725s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.732s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/detail/target__builder.hpp
+[3.741s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/detail/target__struct.hpp
+[3.746s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/detail/target__traits.hpp
+[3.753s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/target.hpp
+[3.760s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/detail/target__rosidl_typesupport_fastrtps_cpp.hpp
+[3.767s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.776s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/detail/target__rosidl_typesupport_introspection_c.h
+[3.782s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.789s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/include/custom_msg/custom_msg/msg/detail/target__rosidl_typesupport_introspection_cpp.hpp
+[3.796s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/environment/pythonpath.sh
+[3.804s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/environment/pythonpath.dsv
+[3.810s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg-0.0.0-py3.10.egg-info/PKG-INFO
+[3.820s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.829s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.835s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg-0.0.0-py3.10.egg-info/top_level.txt
+[3.843s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/__init__.py
+[3.849s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/_custom_msg_s.ep.rosidl_typesupport_c.c
+[3.856s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/_custom_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.862s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/_custom_msg_s.ep.rosidl_typesupport_introspection_c.c
+[3.869s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/custom_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.876s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/custom_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.882s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/custom_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.890s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/libcustom_msg__rosidl_generator_py.so
+[3.898s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/msg/__init__.py
+[3.905s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/msg/_target.py
+[3.915s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/msg/_target_s.c
+[3.924s] -- Up-to-date symlink: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/custom_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.924s] -- Up-to-date symlink: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/custom_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.924s] -- Up-to-date symlink: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/custom_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.924s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/msg/Target.idl
+[3.931s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/msg/Target.msg
+[3.937s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/ament_index/resource_index/package_run_dependencies/custom_msg
+[3.943s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/ament_index/resource_index/parent_prefix_path/custom_msg
+[3.949s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/environment/ament_prefix_path.sh
+[3.956s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/environment/ament_prefix_path.dsv
+[3.962s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/environment/path.sh
+[3.969s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/environment/path.dsv
+[3.975s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/local_setup.bash
+[3.981s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/local_setup.sh
+[3.987s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/local_setup.zsh
+[3.993s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/local_setup.dsv
+[3.999s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/package.dsv
+[4.006s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/ament_index/resource_index/packages/custom_msg
+[4.013s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/rosidl_cmake-extras.cmake
+[4.020s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.027s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.034s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/ament_cmake_export_libraries-extras.cmake
+[4.039s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/ament_cmake_export_targets-extras.cmake
+[4.046s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.052s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.058s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/custom_msgConfig.cmake
+[4.064s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/custom_msgConfig-version.cmake
+[4.070s] -- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/package.xml
+[4.076s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_generator_c.so
+[4.077s] -- Set runtime path of "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_generator_c.so" to ""
+[4.077s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_fastrtps_c.so
+[4.077s] -- Set runtime path of "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_fastrtps_c.so" to ""
+[4.077s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_fastrtps_cpp.so
+[4.077s] -- Set runtime path of "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.077s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_introspection_c.so
+[4.077s] -- Set runtime path of "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_introspection_c.so" to ""
+[4.078s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_c.so
+[4.078s] -- Set runtime path of "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_c.so" to ""
+[4.078s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_introspection_cpp.so
+[4.078s] -- Set runtime path of "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_introspection_cpp.so" to ""
+[4.078s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_cpp.so
+[4.078s] -- Set runtime path of "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_typesupport_cpp.so" to ""
+[4.108s] Listing '/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg'...
+[4.108s] Compiling '/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/__init__.py'...
+[4.108s] Listing '/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/msg'...
+[4.108s] Compiling '/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/msg/__init__.py'...
+[4.108s] Compiling '/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/local/lib/python3.10/dist-packages/custom_msg/msg/_target.py'...
+[4.114s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_generator_py.so
+[4.114s] -- Set runtime path of "/home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/lib/libcustom_msg__rosidl_generator_py.so" to ""
+[4.114s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/export_custom_msg__rosidl_generator_cExport.cmake
+[4.114s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/export_custom_msg__rosidl_generator_cExport-noconfig.cmake
+[4.114s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/export_custom_msg__rosidl_typesupport_fastrtps_cExport.cmake
+[4.115s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/export_custom_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.115s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/export_custom_msg__rosidl_generator_cppExport.cmake
+[4.115s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/export_custom_msg__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.115s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/export_custom_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.115s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/custom_msg__rosidl_typesupport_introspection_cExport.cmake
+[4.115s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/custom_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.115s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/custom_msg__rosidl_typesupport_cExport.cmake
+[4.115s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/custom_msg__rosidl_typesupport_cExport-noconfig.cmake
+[4.115s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/custom_msg__rosidl_typesupport_introspection_cppExport.cmake
+[4.116s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/custom_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.116s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/custom_msg__rosidl_typesupport_cppExport.cmake
+[4.116s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/custom_msg__rosidl_typesupport_cppExport-noconfig.cmake
+[4.116s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/export_custom_msg__rosidl_generator_pyExport.cmake
+[4.116s] -- Installing: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/custom_msg/share/custom_msg/cmake/export_custom_msg__rosidl_generator_pyExport-noconfig.cmake
+[4.122s] Invoked command in '/home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg

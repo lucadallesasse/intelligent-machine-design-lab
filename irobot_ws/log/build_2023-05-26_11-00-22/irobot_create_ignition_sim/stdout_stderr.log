@@ -1,0 +1,35 @@
+-- The C compiler identification is GNU 11.3.0
+-- The CXX compiler identification is GNU 11.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_sim
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/ament_index/resource_index/package_run_dependencies/irobot_create_ignition_sim
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/ament_index/resource_index/parent_prefix_path/irobot_create_ignition_sim
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/environment/ament_prefix_path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/environment/ament_prefix_path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/environment/path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/environment/path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/local_setup.bash
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/local_setup.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/local_setup.zsh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/local_setup.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/package.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/ament_index/resource_index/packages/irobot_create_ignition_sim
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/cmake/irobot_create_ignition_simConfig.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/cmake/irobot_create_ignition_simConfig-version.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_sim/share/irobot_create_ignition_sim/package.xml

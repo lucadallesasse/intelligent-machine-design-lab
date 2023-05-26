@@ -1,0 +1,1 @@
+/home/lucads/intelligent-machine-design-lab/irobot_ws/build/custom_msg/ament_cmake_core/custom_msgConfig-version.cmake

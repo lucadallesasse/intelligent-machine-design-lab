@@ -1,0 +1,4 @@
+source;share/traj_interpolator_closedloop/local_setup.bash
+source;share/traj_interpolator_closedloop/local_setup.dsv
+source;share/traj_interpolator_closedloop/local_setup.sh
+source;share/traj_interpolator_closedloop/local_setup.zsh

@@ -1,0 +1,1 @@
+/home/lucads/intelligent-machine-design-lab/irobot_ws/build/traj_interpolator_closedloop/ament_cmake_core/traj_interpolator_closedloopConfig-version.cmake

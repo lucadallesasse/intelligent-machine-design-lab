@@ -1,0 +1,2 @@
+source;share/traj_interpolator_closedloop/environment/ament_prefix_path.sh
+source;share/traj_interpolator_closedloop/environment/path.sh

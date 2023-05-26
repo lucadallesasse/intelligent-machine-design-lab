@@ -1,0 +1,50 @@
+[35m[1mConsolidate compiler generated dependencies of target irobot_create_ignition_pose_republisher_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target irobot_create_ignition_interface_buttons_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target irobot_create_ignition_sensors_lib[0m
+[ 11%] Built target irobot_create_ignition_interface_buttons_lib
+[ 22%] Built target irobot_create_ignition_pose_republisher_lib
+[35m[1mConsolidate compiler generated dependencies of target interface_buttons_node[0m
+[35m[1mConsolidate compiler generated dependencies of target pose_republisher_node[0m
+[ 66%] Built target irobot_create_ignition_sensors_lib
+[35m[1mConsolidate compiler generated dependencies of target sensors_node[0m
+[ 77%] Built target pose_republisher_node
+[ 88%] Built target interface_buttons_node
+[100%] Built target sensors_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/lib/libirobot_create_ignition_pose_republisher_lib.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/lib/libirobot_create_ignition_sensors_lib.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/lib/libirobot_create_ignition_interface_buttons_lib.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/lib/irobot_create_ignition_toolbox/pose_republisher_node
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/lib/irobot_create_ignition_toolbox/sensors_node
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/lib/irobot_create_ignition_toolbox/interface_buttons_node
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/include/irobot_create_ignition_toolbox/interface_buttons/interface_buttons_node.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/include/irobot_create_ignition_toolbox/pose_republisher/pose_republisher.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/include/irobot_create_ignition_toolbox/sensors/bumper.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/include/irobot_create_ignition_toolbox/sensors/cliff.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/include/irobot_create_ignition_toolbox/sensors/ir_intensity.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/include/irobot_create_ignition_toolbox/sensors/ir_opcode.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/include/irobot_create_ignition_toolbox/sensors/mouse.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/include/irobot_create_ignition_toolbox/sensors/sensors_node.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/include/irobot_create_ignition_toolbox/sensors/wheel_drop.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/include/irobot_create_ignition_toolbox/utils.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/environment/library_path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/environment/library_path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/ament_index/resource_index/package_run_dependencies/irobot_create_ignition_toolbox
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/ament_index/resource_index/parent_prefix_path/irobot_create_ignition_toolbox
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/environment/ament_prefix_path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/environment/ament_prefix_path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/environment/path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/environment/path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/local_setup.bash
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/local_setup.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/local_setup.zsh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/local_setup.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/package.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/ament_index/resource_index/packages/irobot_create_ignition_toolbox
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/cmake/irobot_create_ignition_toolboxConfig.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/cmake/irobot_create_ignition_toolboxConfig-version.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_ignition_toolbox/share/irobot_create_ignition_toolbox/package.xml

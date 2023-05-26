@@ -1,0 +1,5 @@
+<launch>
+    <!-- Run the draw_traj node -->
+    <node name="draw_traj" pkg="traj_interpolator" type="draw_traj" />
+
+</launch>

@@ -4,20 +4,17 @@
 #include <vector>
 #include "custom_msg/msg/target.hpp" 
 #include <nav_msgs/msg/odometry.hpp>
-#include <std_msgs/msg/float64.hpp>
 #include "geometry_msgs/msg/twist.hpp"
-#include "tf2/LinearMath/Quaternion.h"
-#include "tf2/LinearMath/Matrix3x3.h"
 #include "geometry_msgs/msg/pose2_d.hpp"
 #include <unistd.h>
 #include <chrono>
 
 
-#define MAX_LIN_VEL 0.2
-#define MAX_ANG_VEL 0.3
-#define MAX_LIN_ACC 0.1
-#define MAX_ANG_ACC 0.1
-#define FREQUENCY 15.0
+#define MAX_LIN_VEL 0.1
+#define MAX_ANG_VEL 0.1
+#define MAX_LIN_ACC 0.05
+#define MAX_ANG_ACC 0.05
+#define FREQUENCY 10.0
 
 class InterpolatorNode : public rclcpp::Node
 {
@@ -40,8 +37,6 @@ public:
     linear_velocity_ = MAX_LIN_VEL;   // Adjust the linear velocity as per your requirements 
     angular_velocity_ = MAX_ANG_VEL;  // Adjust the angular velocity as per your requirements 
 
-    times = 15;
-
     // Initialize the flag indicating if the target pose has been reached 
     target_reached_ = false; 
   }
@@ -49,38 +44,46 @@ public:
 private:
 
   // Function to generate a trapezoidal velocity profile
-  std::vector<double> generateTrapezoidalProfile(double distance, double maxVelocity, double acceleration, double frequency)
-  {
+  std::vector<double> generateVelocityProfile(double distance, double maxVelocity, double acceleration, double frequency){
     // Calculate the time required to reach the target velocity during acceleration and deceleration phases (we assumed equal acceleration and deceleration)
-    double accelerationTime = maxVelocity / acceleration;
+    double max_accelerationTime = maxVelocity / acceleration;
 
-    double accelerationDistance = 0.5 * acceleration * accelerationTime * accelerationTime;
+    double accelerationDistance = 0.5 * acceleration * max_accelerationTime * max_accelerationTime;
 
     // Calculate the remaining distance at constant speed
     double remaining_distance = distance - 2*accelerationDistance;
 
     double constantVelocityTime = 0.0;
+    double totalTime = 0.0;
+    double accelerationTime = 0.0;
 
     // Calculate the distance covered during the acceleration and deceleration phases
     if(remaining_distance > 0){
   
       // Calculate the time required for the constant velocity phase
       constantVelocityTime = remaining_distance / maxVelocity;
-
+      accelerationTime = max_accelerationTime;
+      
     }else{
-
+      constantVelocityTime = 0.0;
       accelerationTime = sqrt(distance/acceleration);
+
     }
 
-  
+    totalTime = 2*accelerationTime + constantVelocityTime;
+
     // Calculate the number of points needed in the trajectory
     int numPoints = static_cast<int>(std::ceil(totalTime * frequency));
 
+    //RCLCPP_INFO(this->get_logger(), "totalTime %f , numPoints %i", totalTime, numPoints);
+
     // Calculate the time increment between points
     double dt = 1.0 / frequency;
+    RCLCPP_INFO(this->get_logger(), "dt %f", dt);
 
     // Create a vector to store the velocities
     std::vector<double> velocities;
+    velocities.resize(numPoints);
 
     // Generate the trapezoidal velocity profile
     for (int i = 0; i < numPoints; ++i) {
@@ -91,48 +94,18 @@ private:
 
         if (t <= accelerationTime) {
             velocity = acceleration * t;  // Acceleration phase
-        } else if (t <= accelerationTime + constantVelocityTime) {
+        } else if (t > accelerationTime && (t <= accelerationTime + constantVelocityTime)) {
             velocity = maxVelocity;  // Constant velocity phase
-        } else if (t <= totalTime) {
-            double decelerationTimeOffset = t - (totalTime - decelerationTime);
+        } else {
+            double decelerationTimeOffset = t - (totalTime - accelerationTime);
             velocity = maxVelocity - acceleration * decelerationTimeOffset;  // Deceleration phase
         }
 
-        velocities.push_back(velocity);
+        velocities[i] = velocity;
     }
-
+    RCLCPP_INFO(this->get_logger(), "Size of velocities %ld", velocities.size());
     return velocities;
-}
-
-  std::vector<double> generateVelocities(double max_velocity, double trajectory_duration, double sample_frequency){
-
-    // Define the time vector for the trajectory
-    double dt = 1.0 / sample_frequency;
-    std::vector<double> time_vec;
-
-    for (double t = 0.0; t <= trajectory_duration; t += dt) {
-        time_vec.push_back(t);
-    }
-
-    // Define the trajectory points
-    double start_value = 0.0;
-    double end_value = max_velocity;
-    std::vector<double> trajectory_points(time_vec.size());
-    std::fill(trajectory_points.begin(), trajectory_points.end(), end_value);
-    trajectory_points.front() = start_value;
-
-    // Generate spline interpolator
-    gtsam::Spline2 spline = gtsam::Spline2::Approximate(
-        time_vec, trajectory_points, max_velocity, 0.0, 0.0);
-
-    // Compute velocities at each time step
-    std::vector<double> velocities;
-    for (double t : time_vec) {
-        velocities.push_back(spline.velocity(t));
-    }
-
-    return velocities;
-}
+  }
 
   void targetPoseCallback(const custom_msg::msg::Target::SharedPtr msg) 
   { 
@@ -144,31 +117,26 @@ private:
       double target_y = msg->target_pose.y; 
       double target_theta = (msg->target_orientation)/180.0*M_PI; 
 
-      double distance = std::hypot(target_x - current_pose_.x, target_y - current_pose_.y); 
-      double duration_trans = abs(distance / linear_velocity_); 
+      double distance = std::hypot(target_x - current_pose_.x, target_y - current_pose_.y);  
       double rotation = atan2(target_y - current_pose_.y, target_x - current_pose_.x);
-      double duration_rot = abs(rotation / angular_velocity_); 
 
-      //Generate the velocities (linear and angular) according to the spline interpolation
-      std::vector<double> velocities = generateVelocities(max_velocity, trajectory_duration, FREQUENCY);
-
+      //Generate the velocities (linear and angular)
       // Turn the robot in the direction of the target point
       if(rotation != 0.0){ 
-        turn(rotation,duration_rot); 
+        turn(rotation); 
       }
       
       // Move in a straight line to the target pose 
       if((target_x != 0.0) | (target_y != 0.0)){
-        moveStraight(distance, duration_trans); 
+        moveStraight(distance); 
       }
 
       // Turn to the desired orientation 
-      double rotation_final = target_theta - rotation;
-      double duration_rot2 = abs(rotation_final / angular_velocity_); 
+      double rotation_final = target_theta - rotation; 
 
       RCLCPP_INFO(this->get_logger(), "Distanza %f , rotation initial %f, rotation final %f", distance, rotation, rotation_final);
       if(rotation_final != 0.0){
-        turn(rotation_final,duration_rot2); 
+        turn(rotation_final); 
       }
 
       // Set the target reached flag to true 
@@ -177,33 +145,30 @@ private:
   } 
   
 
-  void moveStraight(double distance, double duration) 
+  void moveStraight(double distance) 
   { 
-    double linear_vel_x = distance / duration; 
-
-    std::string message = "Duration trans: " + std::to_string(duration);
-    RCLCPP_INFO(this->get_logger(), message.c_str());
+    std::vector<double> linear_vel_x = generateVelocityProfile(distance, MAX_LIN_VEL, MAX_LIN_ACC, FREQUENCY); 
 
     // Publish the linear velocity commands
-    auto twist_msg = std::make_unique<geometry_msgs::msg::Twist>(); 
-    twist_msg->linear.x = linear_vel_x; 
+    auto twist_msg = std::make_unique<geometry_msgs::msg::Twist>();  
     
-    double elapsed_total_time = -times/FREQUENCY; 
+    double elapsed_total_time = 0.0; 
 
-    while (elapsed_total_time <= duration + times/FREQUENCY) 
-    { 
+    for(size_t i = 0; i < linear_vel_x.size(); ++i){
+
       auto start = std::chrono::high_resolution_clock::now();
+      twist_msg->linear.x = linear_vel_x[i];
       publisher->publish(*twist_msg); 
       auto end = std::chrono::high_resolution_clock::now();
       
       std::chrono::duration<double> elapsed_time = end - start;
 
       // Calculate the remaining time to sleep to achieve the desired frequency
-      std::chrono::duration<double> sleep_duration = std::chrono::duration<double>(1/FREQUENCY) - elapsed_time;
+      std::chrono::duration<double> sleep_duration = std::chrono::duration<double>(1/FREQUENCY);
       std::this_thread::sleep_for(sleep_duration);
       elapsed_total_time += 1/FREQUENCY;
       std::string message = "Elapsed time: " + std::to_string(elapsed_total_time);
-      RCLCPP_INFO(this->get_logger(), message.c_str()); 
+      RCLCPP_INFO(this->get_logger(), message.c_str());
     } 
 
     // Stop the robot after reaching the target pose 
@@ -211,34 +176,33 @@ private:
     publisher->publish(*twist_msg); 
   } 
 
-  void turn(double target_theta, double duration) 
+  void turn(double target_theta) 
   { 
-    double angular_vel_z = target_theta / duration; 
+    std::vector<double> omega_z = generateVelocityProfile(target_theta, MAX_ANG_VEL, MAX_ANG_ACC, FREQUENCY);
+
+    RCLCPP_INFO(this->get_logger(), "Distanza %f , velocità %f", target_theta, MAX_ANG_VEL);
   
     // Publish the angular velocity commands until the desired orientation is reached 
     auto twist_msg = std::make_unique<geometry_msgs::msg::Twist>(); 
-    twist_msg->angular.z = angular_vel_z; 
 
-    double elapsed_total_time = -times/FREQUENCY; 
+    double elapsed_total_time = 0.0; 
 
-    while (elapsed_total_time <= duration + times/FREQUENCY) 
-    { 
+    for(size_t i = 0; i < omega_z.size(); ++i){
+
       auto start = std::chrono::high_resolution_clock::now();
+      twist_msg->angular.z = omega_z[i]; 
       publisher->publish(*twist_msg); 
       auto end = std::chrono::high_resolution_clock::now();
       
       std::chrono::duration<double> elapsed_time = end - start;
 
       // Calculate the remaining time to sleep to achieve the desired frequency
-      std::chrono::duration<double> sleep_duration = std::chrono::duration<double>(1/FREQUENCY) - elapsed_time;
+      std::chrono::duration<double> sleep_duration = std::chrono::duration<double>(1/FREQUENCY);
       std::this_thread::sleep_for(sleep_duration);
       elapsed_total_time += 1/FREQUENCY;
       std::string message = "Elapsed time: " + std::to_string(elapsed_total_time);
       RCLCPP_INFO(this->get_logger(), message.c_str());
-    }   
-
-    std::string message = "Duration rot: " + std::to_string(duration);
-    RCLCPP_INFO(this->get_logger(), message.c_str());
+    } 
 
     // Stop the robot after reaching the desired orientation 
     twist_msg->angular.z = 0.0; 
@@ -254,7 +218,6 @@ private:
   geometry_msgs::msg::Pose2D current_pose_; 
   double linear_velocity_; 
   double angular_velocity_; 
-  int times;
 
 };
 

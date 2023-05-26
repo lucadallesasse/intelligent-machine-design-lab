@@ -1,0 +1,86 @@
+[35m[1mConsolidate compiler generated dependencies of target hazards_vector_publisher[0m
+[35m[1mConsolidate compiler generated dependencies of target ir_intensity_publisher_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target hazard_publisher_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target ir_intensity_vector_publisher[0m
+[35m[1mConsolidate compiler generated dependencies of target motion_control[0m
+[35m[1mConsolidate compiler generated dependencies of target wheel_status_publisher[0m
+[35m[1mConsolidate compiler generated dependencies of target robot_state[0m
+[35m[1mConsolidate compiler generated dependencies of target wheel_status_publisher_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target ui_mgr[0m
+[35m[1mConsolidate compiler generated dependencies of target motion_control_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target ui_mgr_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target robot_state_lib[0m
+[  5%] Built target hazards_vector_publisher
+[ 10%] Built target ir_intensity_publisher_lib
+[ 16%] Built target hazard_publisher_lib
+[ 21%] Built target ir_intensity_vector_publisher
+[ 27%] Built target motion_control
+[ 32%] Built target wheel_status_publisher
+[ 37%] Built target ui_mgr
+[ 43%] Built target ui_mgr_lib
+[ 51%] Built target robot_state
+[ 54%] Built target wheel_status_publisher_lib
+[ 59%] Built target robot_state_lib
+[ 78%] Built target motion_control_lib
+[35m[1mConsolidate compiler generated dependencies of target mock_publisher_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target kidnap_estimator_publisher_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target mock_publisher[0m
+[35m[1mConsolidate compiler generated dependencies of target kidnap_estimator_publisher[0m
+[ 83%] Built target mock_publisher_lib
+[ 89%] Built target kidnap_estimator_publisher_lib
+[ 94%] Built target kidnap_estimator_publisher
+[100%] Built target mock_publisher
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/irobot_create_nodes/hazards_vector_publisher
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/irobot_create_nodes/ir_intensity_vector_publisher
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/irobot_create_nodes/motion_control
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/irobot_create_nodes/wheel_status_publisher
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/irobot_create_nodes/robot_state
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/irobot_create_nodes/ui_mgr
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/irobot_create_nodes/mock_publisher
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/irobot_create_nodes/kidnap_estimator_publisher
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/libhazard_publisher_lib.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/libir_intensity_publisher_lib.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/libmotion_control_lib.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/libwheel_status_publisher_lib.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/librobot_state_lib.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/libui_mgr_lib.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/libmock_publisher_lib.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/lib/libkidnap_estimator_publisher_lib.so
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/hazards_vector_publisher.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/ir_intensity_vector_publisher.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/kidnap_estimator_publisher.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/mock_publisher.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/motion_control/behaviors_scheduler.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/motion_control/docking_behavior.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/motion_control/drive_goal_behaviors.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/motion_control/reflex_behavior.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/motion_control/simple_goal_controller.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/motion_control/wall_follow_behavior.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/motion_control/wall_follow_states.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/motion_control_node.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/robot_state.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/ui_mgr.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/include/irobot_create_nodes/wheels_publisher.hpp
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/environment/library_path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/environment/library_path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/ament_index/resource_index/package_run_dependencies/irobot_create_nodes
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/ament_index/resource_index/parent_prefix_path/irobot_create_nodes
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/environment/ament_prefix_path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/environment/ament_prefix_path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/environment/path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/environment/path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/local_setup.bash
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/local_setup.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/local_setup.zsh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/local_setup.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/package.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/ament_index/resource_index/packages/irobot_create_nodes
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/ament_index/resource_index/rclcpp_components/irobot_create_nodes
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/cmake/irobot_create_nodesConfig.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/cmake/irobot_create_nodesConfig-version.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/irobot_create_nodes/share/irobot_create_nodes/package.xml

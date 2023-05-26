@@ -1,0 +1,14 @@
+[35m[1mConsolidate compiler generated dependencies of target traj_interpolator[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/traj_interpolator.dir/src/draw_traj.cpp.o[0m
+[01m[K/home/lucads/intelligent-machine-design-lab/irobot_ws/src/traj_interpolator/src/draw_traj.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Pose2D InterpolatorNode::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[01m[K/home/lucads/intelligent-machine-design-lab/irobot_ws/src/traj_interpolator/src/draw_traj.cpp:59:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst _pose_type[m[K’ {aka ‘[01m[Kconst struct geometry_msgs::msg::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpostion[m[K’; did you mean ‘[01m[Kposition[m[K’?
+   59 |     current_pose_.y = msg->pose.pose.[01;31m[Kpostion[m[K.y - reached_pose_.y;
+      |                                      [01;31m[K^~~~~~~[m[K
+      |                                      [32m[Kposition[m[K
+[01m[K/home/lucads/intelligent-machine-design-lab/irobot_ws/src/traj_interpolator/src/draw_traj.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Pose2D InterpolatorNode::targetPoseCallback(custom_msg::msg::Target_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/lucads/intelligent-machine-design-lab/irobot_ws/src/traj_interpolator/src/draw_traj.cpp:176:3:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  176 |   [01;35m[K}[m[K
+      |   [01;35m[K^[m[K
+gmake[2]: *** [CMakeFiles/traj_interpolator.dir/build.make:76: CMakeFiles/traj_interpolator.dir/src/draw_traj.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/traj_interpolator.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

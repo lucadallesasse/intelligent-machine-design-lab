@@ -1,0 +1,24 @@
+[35m[1mConsolidate compiler generated dependencies of target traj_interpolator[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/traj_interpolator.dir/src/draw_traj.cpp.o[0m
+[100%] [32m[1mLinking CXX executable traj_interpolator[0m
+[100%] Built target traj_interpolator
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/lib/traj_interpolator/traj_interpolator
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/ament_index/resource_index/package_run_dependencies/traj_interpolator
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/ament_index/resource_index/parent_prefix_path/traj_interpolator
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/environment/ament_prefix_path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/environment/ament_prefix_path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/environment/path.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/environment/path.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/local_setup.bash
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/local_setup.sh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/local_setup.zsh
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/local_setup.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/package.dsv
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/ament_index/resource_index/packages/traj_interpolator
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/cmake/traj_interpolatorConfig.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/cmake/traj_interpolatorConfig-version.cmake
+-- Symlinking: /home/lucads/intelligent-machine-design-lab/irobot_ws/install/traj_interpolator/share/traj_interpolator/package.xml

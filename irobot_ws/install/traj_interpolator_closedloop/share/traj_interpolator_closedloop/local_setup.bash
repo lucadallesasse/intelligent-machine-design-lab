@@ -1,1 +1,0 @@
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/traj_interpolator_closedloop/ament_cmake_environment_hooks/local_setup.bash

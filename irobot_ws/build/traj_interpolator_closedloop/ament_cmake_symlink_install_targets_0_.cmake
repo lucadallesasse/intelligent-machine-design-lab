@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/lucads/intelligent-machine-design-lab/irobot_ws/build/traj_interpolator_closedloop/traj_interpolator" "TARGETS" "traj_interpolator" "RUNTIME_DESTINATION" "lib/traj_interpolator_closedloop")

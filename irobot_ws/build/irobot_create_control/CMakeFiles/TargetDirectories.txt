@@ -1,9 +1,0 @@
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_control/CMakeFiles/uninstall.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_control/CMakeFiles/irobot_create_control_uninstall.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_control/CMakeFiles/test.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_control/CMakeFiles/edit_cache.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_control/CMakeFiles/rebuild_cache.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_control/CMakeFiles/list_install_components.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_control/CMakeFiles/install.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_control/CMakeFiles/install/local.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_control/CMakeFiles/install/strip.dir

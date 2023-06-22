@@ -1,9 +1,0 @@
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_sim/CMakeFiles/uninstall.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_sim/CMakeFiles/irobot_create_ignition_sim_uninstall.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_sim/CMakeFiles/test.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_sim/CMakeFiles/edit_cache.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_sim/CMakeFiles/rebuild_cache.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_sim/CMakeFiles/list_install_components.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_sim/CMakeFiles/install.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_sim/CMakeFiles/install/local.dir
-/home/lucads/intelligent-machine-design-lab/irobot_ws/build/irobot_create_ignition_sim/CMakeFiles/install/strip.dir

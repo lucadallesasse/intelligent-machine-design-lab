@@ -10,36 +10,36 @@ bool HandleEvent(bool bit_entered){
 		
 	switch (CurrentState){
 	case 0:
-		if(bit_entered == on_pattern[1]){
+		if(bit_entered == on_pattern[0]){
 			CurrentState = 1;				
 		}else{
 			CurrentState = 0; 		
 		}
 		break;
 	case 1:
-		if(bit_entered == on_pattern[2]){
+		if(bit_entered == on_pattern[1]){
 			CurrentState = 2;				
 			}else{
 			CurrentState = 1;
 		}
 		break;
 	case 2:
-		if(bit_entered == on_pattern[3]){
+		if(bit_entered == on_pattern[2]){
 			CurrentState = 3;			
 			}
-		else if(bit_entered == off_pattern[3]){
+		else if(bit_entered == off_pattern[2]){
 			CurrentState = 5;	
-		}else{}
+		}
 		break;
 	case 3:
-		if(bit_entered == on_pattern[4]){
+		if(bit_entered == on_pattern[3]){
 			CurrentState = 4;			
 			}else{
 			CurrentState = 1;
 		}
 		break;		
 	case 4:
-		if(bit_entered == on_pattern[5]){
+		if(bit_entered == on_pattern[4]){
 			CurrentState = 5;			
 			output = 1;
 			}else{
@@ -50,11 +50,12 @@ bool HandleEvent(bool bit_entered){
 		if(bit_entered == 0){
 			CurrentState = 6;			
 			}else{
+			CurrentState = 0;	
 		}
 		break;
 	case 6:
 		if(bit_entered == 0){
-			CurrentState = 0;			
+			CurrentState = 1;			
 			}else{
 			CurrentState = 2;
 			output = 0;
@@ -64,14 +65,35 @@ bool HandleEvent(bool bit_entered){
 	return output;		
 }
 
-bool ReadButton(){
+bool edge_detector(void){
+
+	static char clock_state = 0;
+	bool edge_input = (PORT->Group[SW0/32].IN.reg & (1<<(SW0%32)));
 	
-	bool bit_entered = 0;
+	bool edge_detected = 0;
+		
 	
-	if(gpio_get_pin_level(SW0)){
-		bit_entered = gpio_get_pin_level(DIP_IN); 
-		return HandleEvent(bit_entered);
-	}
+	switch(clock_state){
+		case 0:
+		if(edge_input == 0){
+			clock_state = 1;
+			edge_detected = 1;
+		}else{
+			clock_state = 0;
+			edge_detected = 0;
+		}
+		break;
+		case 1:
+		if(edge_input == 0){
+			clock_state = 1;
+			edge_detected = 0;
+		}else{
+			clock_state = 0;
+			edge_detected = 0;
+		}
+		break;
+		}
+	return edge_detected;
 }
 
 int main(void){
@@ -80,14 +102,26 @@ int main(void){
 	atmel_start_init();
 	
 	/* Initialize the value */
-	bool led;
+	bool input = 0;
+	bool clock_edge_event = 0;
+	bool led = 0;
 	
 	while (1) {
-		led = ReadButton();
-		if(led == 1){
-			gpio_set_pin_level(YLW_LED, 1);
+		clock_edge_event = edge_detector();
+		
+		if(clock_edge_event){
+			input = (PORT->Group[CODE_INPUT/32].IN.reg & (1<<(CODE_INPUT%32)));
+			led = HandleEvent(input);
+		}
+		
+		if(led){
+			//PORT->Group[LED0/32].OUTCLR.reg = (1<<LED0%32);
+			gpio_set_pin_level(LED0,0);
+			
 		}else{
-			gpio_set_pin_level(YLW_LED, 0);
+			//PORT->Group[LED0/32].OUTSET.reg = (1<<LED0%32);
+			gpio_set_pin_level(LED0,1);
+			
 		}
 	}
 }

@@ -17,8 +17,6 @@ struct timer_descriptor TIMER_0;
 
 struct usart_sync_descriptor USART_0;
 
-struct pwm_descriptor PWM_0;
-
 /**
  * \brief Timer initialization function
  *
@@ -60,20 +58,14 @@ void delay_driver_init(void)
 
 void PWM_0_PORT_init(void)
 {
+
+	gpio_set_pin_function(PC10, PINMUX_PC10F_TCC0_WO0);
 }
 
 void PWM_0_CLOCK_init(void)
 {
-
-	hri_mclk_set_APBAMASK_TC0_bit(MCLK);
-	hri_gclk_write_PCHCTRL_reg(GCLK, TC0_GCLK_ID, CONF_GCLK_TC0_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
-}
-
-void PWM_0_init(void)
-{
-	PWM_0_CLOCK_init();
-	PWM_0_PORT_init();
-	pwm_init(&PWM_0, TC0, _tc_get_pwm());
+	hri_mclk_set_APBBMASK_TCC0_bit(MCLK);
+	hri_gclk_write_PCHCTRL_reg(GCLK, TCC0_GCLK_ID, CONF_GCLK_TCC0_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
 }
 
 void system_init(void)
@@ -144,6 +136,10 @@ void system_init(void)
 	USART_0_init();
 
 	delay_driver_init();
+
+	PWM_0_CLOCK_init();
+
+	PWM_0_PORT_init();
 
 	PWM_0_init();
 }

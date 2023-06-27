@@ -26,14 +26,11 @@ extern "C" {
 #include <hal_usart_sync.h>
 
 #include <hal_delay.h>
-#include <hal_pwm.h>
-#include <hpl_tc_base.h>
+#include <tcc_lite.h>
 
 extern struct timer_descriptor TIMER_0;
 
 extern struct usart_sync_descriptor USART_0;
-
-extern struct pwm_descriptor PWM_0;
 
 void USART_0_PORT_init(void);
 void USART_0_CLOCK_init(void);
@@ -41,9 +38,11 @@ void USART_0_init(void);
 
 void delay_driver_init(void);
 
-void PWM_0_PORT_init(void);
 void PWM_0_CLOCK_init(void);
-void PWM_0_init(void);
+
+void PWM_0_PORT_init(void);
+
+int8_t PWM_0_init(void);
 
 /**
  * \brief Perform system initialization, initialize pins and clocks for

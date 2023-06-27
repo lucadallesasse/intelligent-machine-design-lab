@@ -1059,38 +1059,175 @@ drivers:
       domain_group: null
   PWM_0:
     user_label: PWM_0
-    definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::TC0::driver_config_definition::PWM::HAL:Driver:PWM
+    definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::TCC0::driver_config_definition::PWM.Mode::Lite:TCC:PWM
     functionality: PWM
-    api: HAL:Driver:PWM
+    api: Lite:TCC:PWM
     configuration:
-      tc_arch_alock: The Lock Update bit is not affected on overflow/underflow and
-        re-trigger event
-      tc_arch_dbgrun: false
-      tc_arch_evact: Event action disabled
-      tc_arch_mceo0: false
-      tc_arch_mceo1: false
-      tc_arch_ondemand: false
-      tc_arch_ovfeo: false
-      tc_arch_presync: Reload or reset counter on next GCLK
-      tc_arch_runstdby: false
-      tc_arch_tcei: false
-      tc_arch_tcinv: false
-      tc_arch_wave_duty_val: 500
-      tc_arch_wave_per_val: 1000
-      tc_mode: Counter in 16-bit mode
-      tc_prescaler: No division
-      timer_event_control: false
-    optional_signals: []
+      cc_cc0: 0
+      cc_cc1: 0
+      cc_cc2: 0
+      cc_cc3: 0
+      cc_cc4: 0
+      cc_cc5: 0
+      cc_control: false
+      ctrla_alock: false
+      ctrla_control: true
+      ctrla_enable: true
+      ctrla_prescaler: DIV2
+      ctrla_prescsync: GCLK
+      ctrla_runstdby: false
+      ctrlbset_cmd: NONE
+      ctrlbset_control: false
+      ctrlbset_dir: false
+      ctrlbset_idxcmd: DISABLE
+      ctrlbset_lupd: false
+      ctrlbset_oneshot: false
+      dbgctrl_control: false
+      dbgctrl_dbgrun: false
+      dbgctrl_fddbd: false
+      drvctrl_control: false
+      drvctrl_filterval0: 0
+      drvctrl_filterval1: 0
+      drvctrl_inven0: false
+      drvctrl_inven1: false
+      drvctrl_inven2: false
+      drvctrl_inven3: false
+      drvctrl_inven4: false
+      drvctrl_inven5: false
+      drvctrl_inven6: false
+      drvctrl_inven7: false
+      drvctrl_nre0: false
+      drvctrl_nre1: false
+      drvctrl_nre2: false
+      drvctrl_nre3: false
+      drvctrl_nre4: false
+      drvctrl_nre5: false
+      drvctrl_nre6: false
+      drvctrl_nre7: false
+      drvctrl_nrv0: false
+      drvctrl_nrv1: false
+      drvctrl_nrv2: false
+      drvctrl_nrv3: false
+      drvctrl_nrv4: false
+      drvctrl_nrv5: false
+      drvctrl_nrv6: false
+      drvctrl_nrv7: false
+      evctrl_cnteo: false
+      evctrl_cntsel: START
+      evctrl_control: false
+      evctrl_evact0: 'OFF'
+      evctrl_evact1: 'OFF'
+      evctrl_mcei0: false
+      evctrl_mcei1: false
+      evctrl_mcei2: false
+      evctrl_mcei3: false
+      evctrl_mcei4: false
+      evctrl_mcei5: false
+      evctrl_mceo0: false
+      evctrl_mceo1: false
+      evctrl_mceo2: false
+      evctrl_mceo3: false
+      evctrl_mceo4: false
+      evctrl_mceo5: false
+      evctrl_ovfeo: false
+      evctrl_tcei0: false
+      evctrl_tcei1: false
+      evctrl_tcinv0: false
+      evctrl_tcinv1: false
+      evctrl_trgeo: false
+      fctrla_blank: NONE
+      fctrla_blankpresc: false
+      fctrla_blankval: 0
+      fctrla_chsel: CC0
+      fctrla_control: false
+      fctrla_filterval: 0
+      fctrla_halt: DISABLE
+      fctrla_keep: false
+      fctrla_qual: false
+      fctrla_restart: false
+      fctrla_src: DISABLE
+      fctrlb_blank: NONE
+      fctrlb_blankpresc: false
+      fctrlb_blankval: 0
+      fctrlb_chsel: CC0
+      fctrlb_control: false
+      fctrlb_filterval: 0
+      fctrlb_halt: DISABLE
+      fctrlb_keep: false
+      fctrlb_qual: false
+      fctrlb_restart: false
+      fctrlb_src: DISABLE
+      intenset_cnt: false
+      intenset_control: false
+      intenset_dfs: false
+      intenset_err: false
+      intenset_fault0: false
+      intenset_fault1: false
+      intenset_faulta: false
+      intenset_faultb: false
+      intenset_mc0: false
+      intenset_mc1: false
+      intenset_mc2: false
+      intenset_mc3: false
+      intenset_mc4: false
+      intenset_mc5: false
+      intenset_ovf: false
+      intenset_trg: false
+      patt_control: false
+      patt_pge0: false
+      patt_pge1: false
+      patt_pge2: false
+      patt_pge3: false
+      patt_pgv0: false
+      patt_pgv1: false
+      patt_pgv2: false
+      patt_pgv3: false
+      per_control: false
+      per_per: 0
+      wave_ciccen0: false
+      wave_ciccen1: false
+      wave_ciccen2: false
+      wave_ciccen3: false
+      wave_ciperen: false
+      wave_control: false
+      wave_pol0: false
+      wave_pol1: false
+      wave_pol2: false
+      wave_pol3: false
+      wave_pol4: false
+      wave_pol5: false
+      wave_ramp: RAMP1
+      wave_swap0: false
+      wave_swap1: false
+      wave_swap2: false
+      wave_swap3: false
+      wave_wavegen: NFRQ
+      wexctrl_control: false
+      wexctrl_dths: 0
+      wexctrl_dtien0: false
+      wexctrl_dtien1: false
+      wexctrl_dtien2: false
+      wexctrl_dtien3: false
+      wexctrl_dtls: 0
+      wexctrl_otmx: 0
+    optional_signals:
+    - identifier: PWM_0:WO/0
+      pad: PC10
+      mode: PWM output
+      configuration: null
+      definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::optional_signal_definition::TCC0.WO.0
+      name: TCC0/WO/0
+      label: WO/0
     variant: null
     clocks:
       domain_group:
         nodes:
-        - name: TC
+        - name: TCC
           input: Generic clock generator 0
           external: false
           external_frequency: 0
         configuration:
-          tc_gclk_selection: Generic clock generator 0
+          tcc_gclk_selection: Generic clock generator 0
 pads:
   CODE_INPUT:
     name: PB05
@@ -1099,6 +1236,12 @@ pads:
     user_label: CODE_INPUT
     configuration:
       pad_pull_config: Pull-up
+  PC10:
+    name: PC10
+    definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::pad::PC10
+    mode: Peripheral IO
+    user_label: PC10
+    configuration: null
   LED0:
     name: PC18
     definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::pad::PC18

@@ -999,7 +999,7 @@ drivers:
           rtc_clk_selection: RTC source
   USART_0:
     user_label: USART_0
-    definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::SERCOM0::driver_config_definition::UART::HAL:Driver:USART.Sync
+    definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::SERCOM2::driver_config_definition::UART::HAL:Driver:USART.Sync
     functionality: USART
     api: HAL:Driver:USART_Sync
     configuration:
@@ -1026,11 +1026,11 @@ drivers:
     variant:
       specification: TXPO=0, RXPO=1, CMODE=0
       required_signals:
-      - name: SERCOM0/PAD/0
-        pad: PA04
+      - name: SERCOM2/PAD/0
+        pad: PB25
         label: TX
-      - name: SERCOM0/PAD/1
-        pad: PA05
+      - name: SERCOM2/PAD/1
+        pad: PB24
         label: RX
     clocks:
       domain_group:
@@ -1099,18 +1099,6 @@ pads:
     user_label: CODE_INPUT
     configuration:
       pad_pull_config: Pull-up
-  PA04:
-    name: PA04
-    definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::pad::PA04
-    mode: Peripheral IO
-    user_label: PA04
-    configuration: null
-  PA05:
-    name: PA05
-    definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::pad::PA05
-    mode: Peripheral IO
-    user_label: PA05
-    configuration: null
   LED0:
     name: PC18
     definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::pad::PC18
@@ -1118,6 +1106,18 @@ pads:
     user_label: LED0
     configuration:
       pad_initial_level: High
+  PB24:
+    name: PB24
+    definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::pad::PB24
+    mode: Peripheral IO
+    user_label: PB24
+    configuration: null
+  PB25:
+    name: PB25
+    definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::pad::PB25
+    mode: Peripheral IO
+    user_label: PB25
+    configuration: null
   SW0:
     name: PB31
     definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::pad::PB31

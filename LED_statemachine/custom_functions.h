@@ -5,6 +5,8 @@
 extern "C" {
 #endif
 
+#include <atmel_start.h>
+
 bool HandleEvent(bool);
 bool edge_detector(void);
 	

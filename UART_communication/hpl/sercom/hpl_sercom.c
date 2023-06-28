@@ -449,7 +449,7 @@ bool _usart_async_is_byte_sent(const struct _usart_async_device *const device)
 bool _usart_sync_is_byte_received(const struct _usart_sync_device *const device)
 {
 	return hri_sercomusart_get_interrupt_RXC_bit(device->hw);
-}
+ }
 
 /**
  * \brief Set the state of flow control pins

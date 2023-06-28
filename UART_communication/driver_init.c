@@ -60,6 +60,8 @@ void PWM_0_PORT_init(void)
 {
 
 	gpio_set_pin_function(PC10, PINMUX_PC10F_TCC0_WO0);
+
+	gpio_set_pin_function(PC11, PINMUX_PC11F_TCC0_WO1);
 }
 
 void PWM_0_CLOCK_init(void)

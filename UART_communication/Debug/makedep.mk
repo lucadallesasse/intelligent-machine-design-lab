@@ -24,8 +24,6 @@ hal\src\hal_init.c
 
 hal\src\hal_io.c
 
-hal\src\hal_pwm.c
-
 hal\src\hal_sleep.c
 
 hal\src\hal_timer.c
@@ -66,7 +64,9 @@ hpl\sercom\hpl_sercom.c
 
 hpl\systick\hpl_systick.c
 
-hpl\tc\hpl_tc.c
+hpl\tcc\tcc_lite.c
 
 main.c
+
+pwm.c
 

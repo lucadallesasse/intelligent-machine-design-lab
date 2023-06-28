@@ -1,5 +1,5 @@
 format_version: '2'
-name: LED_Switcher
+name: UART_communication
 versions:
   api: '1.0'
   backend: 1.9.698
@@ -1063,8 +1063,8 @@ drivers:
     functionality: PWM
     api: Lite:TCC:PWM
     configuration:
-      cc_cc0: 0
-      cc_cc1: 0
+      cc_cc0: 65535
+      cc_cc1: 65535
       cc_cc2: 0
       cc_cc3: 0
       cc_cc4: 0
@@ -1183,7 +1183,7 @@ drivers:
       patt_pgv2: false
       patt_pgv3: false
       per_control: false
-      per_per: 0
+      per_per: 65535
       wave_ciccen0: false
       wave_ciccen1: false
       wave_ciccen2: false
@@ -1218,6 +1218,13 @@ drivers:
       definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::optional_signal_definition::TCC0.WO.0
       name: TCC0/WO/0
       label: WO/0
+    - identifier: PWM_0:WO/1
+      pad: PC11
+      mode: PWM output
+      configuration: null
+      definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::optional_signal_definition::TCC0.WO.1
+      name: TCC0/WO/1
+      label: WO/1
     variant: null
     clocks:
       domain_group:
@@ -1241,6 +1248,12 @@ pads:
     definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::pad::PC10
     mode: Peripheral IO
     user_label: PC10
+    configuration: null
+  PC11:
+    name: PC11
+    definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::pad::PC11
+    mode: Peripheral IO
+    user_label: PC11
     configuration: null
   LED0:
     name: PC18

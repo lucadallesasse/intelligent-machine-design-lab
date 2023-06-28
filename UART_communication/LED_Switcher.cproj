@@ -139,9 +139,9 @@
           <AcmeProjectActionInfo Action="File" Source="hri/hri_usb_e54.h" IsConfig="false" Hash="I+Mpxa40hh4o1NE68Zi5Gg" />
           <AcmeProjectActionInfo Action="File" Source="hri/hri_wdt_e54.h" IsConfig="false" Hash="CfZas1TGXPKWyHJU+xHJ7A" />
           <AcmeProjectActionInfo Action="File" Source="main.c" IsConfig="false" Hash="k0AH7j+BrmdFhBPzCCMptA" />
-          <AcmeProjectActionInfo Action="File" Source="driver_init.c" IsConfig="false" Hash="LKmoL8UwP2VUhl9Pxw2dyg" />
+          <AcmeProjectActionInfo Action="File" Source="driver_init.c" IsConfig="false" Hash="DShs69x6tcdwaZ9L2FN2rw" />
           <AcmeProjectActionInfo Action="File" Source="driver_init.h" IsConfig="false" Hash="pBqJ9OsfsU9HOqaDkzRpRg" />
-          <AcmeProjectActionInfo Action="File" Source="atmel_start_pins.h" IsConfig="false" Hash="gtoGGV9XbShzLu/LOy5GTA" />
+          <AcmeProjectActionInfo Action="File" Source="atmel_start_pins.h" IsConfig="false" Hash="WRwkXfSYhq2BA8j9HPtIPw" />
           <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.h" IsConfig="false" Hash="gCEv11dRCS+JmTUkhTn5zw" />
           <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.c" IsConfig="false" Hash="mGpJHtWU9EtXCxfSTlFJAQ" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_timer.h" IsConfig="false" Hash="5pZVthtMl40VMvofOld2ng" />
@@ -178,7 +178,7 @@
           <AcmeProjectActionInfo Action="File" Source="hpl/rtc/hpl_rtc_base.h" IsConfig="false" Hash="6MZP9mg3QA6lytcm00LePQ" />
           <AcmeProjectActionInfo Action="File" Source="hpl/sercom/hpl_sercom.c" IsConfig="false" Hash="CjIu1Ksl4k1CotxZpVcqMA" />
           <AcmeProjectActionInfo Action="File" Source="hpl/systick/hpl_systick.c" IsConfig="false" Hash="iMt5/yM6Jfaf01ZFdIodmw" />
-          <AcmeProjectActionInfo Action="File" Source="hpl/tcc/tcc_lite.c" IsConfig="false" Hash="2pBFpdHWvpFKb9PmzQuziA" />
+          <AcmeProjectActionInfo Action="File" Source="hpl/tcc/tcc_lite.c" IsConfig="false" Hash="PVfjjppEw/mV+SPfI0nvaw" />
           <AcmeProjectActionInfo Action="File" Source="hpl/tcc/tcc_lite.h" IsConfig="false" Hash="prwUpsHYgNE/U9mIl723kA" />
           <AcmeProjectActionInfo Action="File" Source="atmel_start.h" IsConfig="false" Hash="9RBG5E2ViQiSP2Gn4/FGpA" />
           <AcmeProjectActionInfo Action="File" Source="atmel_start.c" IsConfig="false" Hash="1RHIE7zTtYK4DURNPUqF9w" />
@@ -198,7 +198,7 @@
       </AcmeProjectConfig>
     </AcmeProjectConfig>
     <avrtool>com.atmel.avrdbg.tool.edbg</avrtool>
-    <avrtoolserialnumber>ATML2748071800006671</avrtoolserialnumber>
+    <avrtoolserialnumber>ATML2748071800007287</avrtoolserialnumber>
     <avrdeviceexpectedsignature>0x61840300</avrdeviceexpectedsignature>
     <avrtoolinterface>SWD</avrtoolinterface>
     <com_atmel_avrdbg_tool_edbg>
@@ -209,7 +209,7 @@
         <InterfaceName>SWD</InterfaceName>
       </ToolOptions>
       <ToolType>com.atmel.avrdbg.tool.edbg</ToolType>
-      <ToolNumber>ATML2748071800006671</ToolNumber>
+      <ToolNumber>ATML2748071800007287</ToolNumber>
       <ToolName>EDBG</ToolName>
     </com_atmel_avrdbg_tool_edbg>
     <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
@@ -870,6 +870,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pwm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pwm.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

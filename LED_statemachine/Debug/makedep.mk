@@ -4,6 +4,8 @@
 
 atmel_start.c
 
+custom_functions.c
+
 Device_Startup\startup_same54.c
 
 Device_Startup\system_same54.c

@@ -6,9 +6,10 @@ extern "C" {
 #endif
 
 #include <string.h>
+#include <atmel_start.h>
 
-bool HandleEvent(bool)
-bool edge_detector(void)
+int HandleEvent(int);
+bool edge_detector(void);
 	
 #ifdef __cplusplus
 }

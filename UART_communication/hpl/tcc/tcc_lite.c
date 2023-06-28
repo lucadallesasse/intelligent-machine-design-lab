@@ -111,9 +111,9 @@ int8_t PWM_0_init()
 	// */
 	//		 | 0); /* Run in debug: 0 */
 
-	// hri_tcc_write_CC_reg(TCC0, 0 ,0x0); /* Channel 0 Compare/Capture Value: 0x0 */
+	//hri_tcc_write_CC_reg(TCC0, 0, 0xffff); /* Channel 0 Compare/Capture Value: 0xffff */
 
-	// hri_tcc_write_CC_reg(TCC0, 1 ,0x0); /* Channel 1 Compare/Capture Value: 0x0 */
+	//hri_tcc_write_CC_reg(TCC0, 1, 0xffff); /* Channel 1 Compare/Capture Value: 0xffff */
 
 	// hri_tcc_write_CC_reg(TCC0, 2 ,0x0); /* Channel 2 Compare/Capture Value: 0x0 */
 
@@ -158,7 +158,7 @@ int8_t PWM_0_init()
 	//		 | 0 << TCC_PATT_PGE1_Pos /* Pattern Generator 1 Output Enable: disabled */
 	//		 | 0 << TCC_PATT_PGE0_Pos); /* Pattern Generator 0 Output Enable: disabled */
 
-	// hri_tcc_write_PER_reg(TCC0,0x0); /*  Period Value: 0x0 */
+	hri_tcc_write_PER_reg(TCC0, 0x1770); /*  Period Value: 0xffff */
 
 	// hri_tcc_write_EVCTRL_reg(TCC0,0 << TCC_EVCTRL_MCEO5_Pos /* Match or Capture Channel 5 Event Output Enable:
 	// disabled */

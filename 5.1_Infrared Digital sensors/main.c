@@ -12,11 +12,6 @@ static int min = 0;
 static struct io_descriptor *io;
 static int c = 0;
 
-/* A specific byte pattern stored at the begining of SmartEEPROM data area.
- * When the application comes from a reset, if it finds this signature,
- * the assumption is that the SmartEEPROM has some valid data.
- */
-#define SMEE_CUSTOM_SIG 0x5a5a5a5a
 /* Fixed address for storing the value of the counter. This address must be within the total
  * number of EEPROM data bytes ( Defined by SBLK and PSZ fuse values).
  */
@@ -74,7 +69,7 @@ int main(void)
 		clock_edge_event1 = edge_detector(PORT->Group[CODE_INPUT1/32].IN.reg & (1<<(CODE_INPUT1%32)),0); 
 		clock_edge_event2 = edge_detector(PORT->Group[CODE_INPUT2/32].IN.reg & (1<<(CODE_INPUT2%32)),1);  
 		clock_edge_event3 = edge_detector(PORT->Group[CODE_INPUT3/32].IN.reg & (1<<(CODE_INPUT3%32)),2);
-		clock_edge_event4 = edge_detector(PORT->Group[CODE_INPUT4/32].IN.reg & (1<<(CODE_INPUT4%32)),2);
+		clock_edge_event4 = edge_detector(PORT->Group[CODE_INPUT4/32].IN.reg & (1<<(CODE_INPUT4%32)),3);
 		
 		if(clock_edge_event1 && !clock_edge_event2 && !clock_edge_event3 && !clock_edge_event4){
 			timer_start(&TIMER_0);

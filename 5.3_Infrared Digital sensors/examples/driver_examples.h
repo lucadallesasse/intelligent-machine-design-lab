@@ -12,15 +12,13 @@
 extern "C" {
 #endif
 
-void UART_example(void);
+void TIMER_0_example(void);
 
-void EDBG_UART_example(void);
+void USART_1_example(void);
+
+void USART_0_example(void);
 
 void delay_example(void);
-
-void TIMER_1_example(void);
-
-void TIMER_0_example(void);
 
 #ifdef __cplusplus
 }

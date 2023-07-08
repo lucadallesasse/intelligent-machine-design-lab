@@ -4,8 +4,6 @@
 
 atmel_start.c
 
-custom_functions.c
-
 Device_Startup\startup_same54.c
 
 Device_Startup\system_same54.c
@@ -30,6 +28,8 @@ hal\src\hal_sleep.c
 
 hal\src\hal_timer.c
 
+hal\src\hal_usart_async.c
+
 hal\src\hal_usart_sync.c
 
 hal\utils\src\utils_assert.c
@@ -37,6 +37,8 @@ hal\utils\src\utils_assert.c
 hal\utils\src\utils_event.c
 
 hal\utils\src\utils_list.c
+
+hal\utils\src\utils_ringbuffer.c
 
 hal\utils\src\utils_syscalls.c
 
@@ -60,13 +62,13 @@ hpl\pm\hpl_pm.c
 
 hpl\ramecc\hpl_ramecc.c
 
+hpl\rtc\hpl_rtc.c
+
 hpl\sercom\hpl_sercom.c
 
 hpl\systick\hpl_systick.c
 
 hpl\tcc\tcc_lite.c
-
-hpl\tc\hpl_tc.c
 
 main.c
 

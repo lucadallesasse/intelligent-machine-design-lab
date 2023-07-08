@@ -1333,11 +1333,5 @@ pads:
     user_label: SW0
     configuration:
       pad_pull_config: Pull-up
-  DIP_IN:
-    name: PB01
-    definition: Atmel:SAME54_Drivers:0.0.1::SAME54P20A-AU::pad::PB01
-    mode: Digital input
-    user_label: DIP_IN
-    configuration: null
 toolchain_options: []
 static_files: []

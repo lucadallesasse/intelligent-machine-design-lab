@@ -11,88 +11,17 @@
 #include <utils.h>
 #include <hal_init.h>
 
-struct timer_descriptor TIMER_1;
-struct timer_descriptor TIMER_0;
+#include <hpl_rtc_base.h>
 
-struct usart_sync_descriptor UART;
+/*! The buffer size for USART */
+#define USART_1_BUFFER_SIZE 16
 
-struct usart_sync_descriptor EDBG_UART;
+struct timer_descriptor       TIMER_0;
+struct usart_async_descriptor USART_1;
 
-void UART_PORT_init(void)
-{
+static uint8_t USART_1_buffer[USART_1_BUFFER_SIZE];
 
-	gpio_set_pin_function(PA04, PINMUX_PA04D_SERCOM0_PAD0);
-
-	gpio_set_pin_function(PA05, PINMUX_PA05D_SERCOM0_PAD1);
-}
-
-void UART_CLOCK_init(void)
-{
-	hri_gclk_write_PCHCTRL_reg(GCLK, SERCOM0_GCLK_ID_CORE, CONF_GCLK_SERCOM0_CORE_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
-	hri_gclk_write_PCHCTRL_reg(GCLK, SERCOM0_GCLK_ID_SLOW, CONF_GCLK_SERCOM0_SLOW_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
-
-	hri_mclk_set_APBAMASK_SERCOM0_bit(MCLK);
-}
-
-void UART_init(void)
-{
-	UART_CLOCK_init();
-	usart_sync_init(&UART, SERCOM0, (void *)NULL);
-	UART_PORT_init();
-}
-
-void EDBG_UART_PORT_init(void)
-{
-
-	gpio_set_pin_function(PB25, PINMUX_PB25D_SERCOM2_PAD0);
-
-	gpio_set_pin_function(PB24, PINMUX_PB24D_SERCOM2_PAD1);
-}
-
-void EDBG_UART_CLOCK_init(void)
-{
-	hri_gclk_write_PCHCTRL_reg(GCLK, SERCOM2_GCLK_ID_CORE, CONF_GCLK_SERCOM2_CORE_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
-	hri_gclk_write_PCHCTRL_reg(GCLK, SERCOM2_GCLK_ID_SLOW, CONF_GCLK_SERCOM2_SLOW_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
-
-	hri_mclk_set_APBBMASK_SERCOM2_bit(MCLK);
-}
-
-void EDBG_UART_init(void)
-{
-	EDBG_UART_CLOCK_init();
-	usart_sync_init(&EDBG_UART, SERCOM2, (void *)NULL);
-	EDBG_UART_PORT_init();
-}
-
-void delay_driver_init(void)
-{
-	delay_init(SysTick);
-}
-
-/**
- * \brief Timer initialization function
- *
- * Enables Timer peripheral, clocks and initializes Timer driver
- */
-static void TIMER_1_init(void)
-{
-	hri_mclk_set_APBAMASK_TC0_bit(MCLK);
-	hri_gclk_write_PCHCTRL_reg(GCLK, TC0_GCLK_ID, CONF_GCLK_TC0_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
-
-	timer_init(&TIMER_1, TC0, _tc_get_timer());
-}
-
-void PWM_0_PORT_init(void)
-{
-
-	gpio_set_pin_function(PA10, PINMUX_PA10E_TC1_WO0);
-}
-
-void PWM_0_CLOCK_init(void)
-{
-	hri_mclk_set_APBAMASK_TC1_bit(MCLK);
-	hri_gclk_write_PCHCTRL_reg(GCLK, TC1_GCLK_ID, CONF_GCLK_TC1_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
-}
+struct usart_sync_descriptor USART_0;
 
 /**
  * \brief Timer initialization function
@@ -101,10 +30,89 @@ void PWM_0_CLOCK_init(void)
  */
 static void TIMER_0_init(void)
 {
-	hri_mclk_set_APBBMASK_TC2_bit(MCLK);
-	hri_gclk_write_PCHCTRL_reg(GCLK, TC2_GCLK_ID, CONF_GCLK_TC2_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
+	hri_mclk_set_APBAMASK_RTC_bit(MCLK);
+	timer_init(&TIMER_0, RTC, _rtc_get_timer());
+}
 
-	timer_init(&TIMER_0, TC2, _tc_get_timer());
+/**
+ * \brief USART Clock initialization function
+ *
+ * Enables register interface and peripheral clock
+ */
+void USART_1_CLOCK_init()
+{
+
+	hri_gclk_write_PCHCTRL_reg(GCLK, SERCOM0_GCLK_ID_CORE, CONF_GCLK_SERCOM0_CORE_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
+	hri_gclk_write_PCHCTRL_reg(GCLK, SERCOM0_GCLK_ID_SLOW, CONF_GCLK_SERCOM0_SLOW_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
+
+	hri_mclk_set_APBAMASK_SERCOM0_bit(MCLK);
+}
+
+/**
+ * \brief USART pinmux initialization function
+ *
+ * Set each required pin to USART functionality
+ */
+void USART_1_PORT_init()
+{
+
+	gpio_set_pin_function(PA04, PINMUX_PA04D_SERCOM0_PAD0);
+
+	gpio_set_pin_function(PA05, PINMUX_PA05D_SERCOM0_PAD1);
+}
+
+/**
+ * \brief USART initialization function
+ *
+ * Enables USART peripheral, clocks and initializes USART driver
+ */
+void USART_1_init(void)
+{
+	USART_1_CLOCK_init();
+	usart_async_init(&USART_1, SERCOM0, USART_1_buffer, USART_1_BUFFER_SIZE, (void *)NULL);
+	USART_1_PORT_init();
+}
+
+void USART_0_PORT_init(void)
+{
+
+	gpio_set_pin_function(PB25, PINMUX_PB25D_SERCOM2_PAD0);
+
+	gpio_set_pin_function(PB24, PINMUX_PB24D_SERCOM2_PAD1);
+}
+
+void USART_0_CLOCK_init(void)
+{
+	hri_gclk_write_PCHCTRL_reg(GCLK, SERCOM2_GCLK_ID_CORE, CONF_GCLK_SERCOM2_CORE_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
+	hri_gclk_write_PCHCTRL_reg(GCLK, SERCOM2_GCLK_ID_SLOW, CONF_GCLK_SERCOM2_SLOW_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
+
+	hri_mclk_set_APBBMASK_SERCOM2_bit(MCLK);
+}
+
+void USART_0_init(void)
+{
+	USART_0_CLOCK_init();
+	usart_sync_init(&USART_0, SERCOM2, (void *)NULL);
+	USART_0_PORT_init();
+}
+
+void delay_driver_init(void)
+{
+	delay_init(SysTick);
+}
+
+void PWM_0_PORT_init(void)
+{
+
+	gpio_set_pin_function(PC10, PINMUX_PC10F_TCC0_WO0);
+
+	gpio_set_pin_function(PC11, PINMUX_PC11F_TCC0_WO1);
+}
+
+void PWM_0_CLOCK_init(void)
+{
+	hri_mclk_set_APBBMASK_TCC0_bit(MCLK);
+	hri_gclk_write_PCHCTRL_reg(GCLK, TCC0_GCLK_ID, CONF_GCLK_TCC0_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
 }
 
 void system_init(void)
@@ -126,26 +134,12 @@ void system_init(void)
 
 	gpio_set_pin_function(DIP_IN, GPIO_PIN_FUNCTION_OFF);
 
-	// GPIO on PB04
-
-	gpio_set_pin_level(LED_green2,
-	                   // <y> Initial level
-	                   // <id> pad_initial_level
-	                   // <false"> Low
-	                   // <true"> High
-	                   false);
-
-	// Set pin direction to output
-	gpio_set_pin_direction(LED_green2, GPIO_DIRECTION_OUT);
-
-	gpio_set_pin_function(LED_green2, GPIO_PIN_FUNCTION_OFF);
-
 	// GPIO on PB05
 
 	// Set pin direction to input
-	gpio_set_pin_direction(CODE_INPUT1, GPIO_DIRECTION_IN);
+	gpio_set_pin_direction(CODE_INPUT, GPIO_DIRECTION_IN);
 
-	gpio_set_pin_pull_mode(CODE_INPUT1,
+	gpio_set_pin_pull_mode(CODE_INPUT,
 	                       // <y> Pull configuration
 	                       // <id> pad_pull_config
 	                       // <GPIO_PULL_OFF"> Off
@@ -153,52 +147,7 @@ void system_init(void)
 	                       // <GPIO_PULL_DOWN"> Pull-down
 	                       GPIO_PULL_UP);
 
-	gpio_set_pin_function(CODE_INPUT1, GPIO_PIN_FUNCTION_OFF);
-
-	// GPIO on PB06
-
-	// Set pin direction to input
-	gpio_set_pin_direction(CODE_INPUT2, GPIO_DIRECTION_IN);
-
-	gpio_set_pin_pull_mode(CODE_INPUT2,
-	                       // <y> Pull configuration
-	                       // <id> pad_pull_config
-	                       // <GPIO_PULL_OFF"> Off
-	                       // <GPIO_PULL_UP"> Pull-up
-	                       // <GPIO_PULL_DOWN"> Pull-down
-	                       GPIO_PULL_UP);
-
-	gpio_set_pin_function(CODE_INPUT2, GPIO_PIN_FUNCTION_OFF);
-
-	// GPIO on PB14
-
-	// Set pin direction to input
-	gpio_set_pin_direction(CODE_INPUT3, GPIO_DIRECTION_IN);
-
-	gpio_set_pin_pull_mode(CODE_INPUT3,
-	                       // <y> Pull configuration
-	                       // <id> pad_pull_config
-	                       // <GPIO_PULL_OFF"> Off
-	                       // <GPIO_PULL_UP"> Pull-up
-	                       // <GPIO_PULL_DOWN"> Pull-down
-	                       GPIO_PULL_UP);
-
-	gpio_set_pin_function(CODE_INPUT3, GPIO_PIN_FUNCTION_OFF);
-
-	// GPIO on PB15
-
-	// Set pin direction to input
-	gpio_set_pin_direction(CODE_INPUT4, GPIO_DIRECTION_IN);
-
-	gpio_set_pin_pull_mode(CODE_INPUT4,
-	                       // <y> Pull configuration
-	                       // <id> pad_pull_config
-	                       // <GPIO_PULL_OFF"> Off
-	                       // <GPIO_PULL_UP"> Pull-up
-	                       // <GPIO_PULL_DOWN"> Pull-down
-	                       GPIO_PULL_UP);
-
-	gpio_set_pin_function(CODE_INPUT4, GPIO_PIN_FUNCTION_OFF);
+	gpio_set_pin_function(CODE_INPUT, GPIO_PIN_FUNCTION_OFF);
 
 	// GPIO on PB31
 
@@ -222,25 +171,23 @@ void system_init(void)
 	                   // <id> pad_initial_level
 	                   // <false"> Low
 	                   // <true"> High
-	                   false);
+	                   true);
 
 	// Set pin direction to output
 	gpio_set_pin_direction(LED0, GPIO_DIRECTION_OUT);
 
 	gpio_set_pin_function(LED0, GPIO_PIN_FUNCTION_OFF);
 
-	UART_init();
+	TIMER_0_init();
+	USART_1_init();
 
-	EDBG_UART_init();
+	USART_0_init();
 
 	delay_driver_init();
 
-	TIMER_1_init();
 	PWM_0_CLOCK_init();
 
 	PWM_0_PORT_init();
 
 	PWM_0_init();
-
-	TIMER_0_init();
 }

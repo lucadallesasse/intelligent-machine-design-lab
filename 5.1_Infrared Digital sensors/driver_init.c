@@ -86,21 +86,6 @@ void system_init(void)
 {
 	init_mcu();
 
-	// GPIO on PB01
-
-	// Set pin direction to input
-	gpio_set_pin_direction(DIP_IN, GPIO_DIRECTION_IN);
-
-	gpio_set_pin_pull_mode(DIP_IN,
-	                       // <y> Pull configuration
-	                       // <id> pad_pull_config
-	                       // <GPIO_PULL_OFF"> Off
-	                       // <GPIO_PULL_UP"> Pull-up
-	                       // <GPIO_PULL_DOWN"> Pull-down
-	                       GPIO_PULL_OFF);
-
-	gpio_set_pin_function(DIP_IN, GPIO_PIN_FUNCTION_OFF);
-
 	// GPIO on PB04
 
 	gpio_set_pin_level(LED_green2,

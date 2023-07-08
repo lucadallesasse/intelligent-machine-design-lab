@@ -21,31 +21,26 @@ extern "C" {
 #include <hal_io.h>
 #include <hal_sleep.h>
 
-#include <hal_usart_sync.h>
+#include <hal_timer.h>
+#include <hal_usart_async.h>
 
 #include <hal_usart_sync.h>
 
 #include <hal_delay.h>
-#include <hal_timer.h>
-#include <hpl_tc_base.h>
-#include <tc_lite.h>
-#include <hal_timer.h>
-#include <hpl_tc_base.h>
+#include <tcc_lite.h>
 
-extern struct usart_sync_descriptor UART;
+extern struct timer_descriptor       TIMER_0;
+extern struct usart_async_descriptor USART_1;
 
-extern struct usart_sync_descriptor EDBG_UART;
+extern struct usart_sync_descriptor USART_0;
 
-extern struct timer_descriptor TIMER_1;
-extern struct timer_descriptor TIMER_0;
+void USART_1_PORT_init(void);
+void USART_1_CLOCK_init(void);
+void USART_1_init(void);
 
-void UART_PORT_init(void);
-void UART_CLOCK_init(void);
-void UART_init(void);
-
-void EDBG_UART_PORT_init(void);
-void EDBG_UART_CLOCK_init(void);
-void EDBG_UART_init(void);
+void USART_0_PORT_init(void);
+void USART_0_CLOCK_init(void);
+void USART_0_init(void);
 
 void delay_driver_init(void);
 

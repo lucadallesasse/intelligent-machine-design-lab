@@ -12,15 +12,9 @@ static int min = 0;
 static struct io_descriptor *io;
 static int c = 0;
 
-/* Fixed address for storing the value of the counter. This address must be within the total
- * number of EEPROM data bytes ( Defined by SBLK and PSZ fuse values).
- */
-#define MEM_ADDR 1
-/* This example assumes SBLK = 1 and PSZ = 3, thus total size is 4096 bytes */
-#define SEEP_FINAL_BYTE_INDEX 4095
-/* Define a pointer to access SmartEEPROM as bytes */
-uint8_t *SmartEEPROM8 = (uint8_t *)SEEPROM_ADDR;
-
+// #define MEM_ADDR 10
+// // /* Define a pointer to access SmartEEPROM as bytes */
+// uint8_t *SmartEEPROM8 = (uint8_t *)SEEPROM_ADDR;
 
 static void timer_task1_cb(const struct timer_task *const timer_task)
 {	
@@ -33,11 +27,10 @@ static void timer_task1_cb(const struct timer_task *const timer_task)
 		s = 0;
 		min += 1;
 	}
-	
 	//Send the timer count via UART every 1s
-	char timeString[6];
-	sprintf(timeString, "%02d:%02d<%10d>\n", min, s, c);
-	io_write(io, (uint8_t *)timeString, strlen(timeString));            //TO DO: check the actual length!
+	char timeString[12];
+	sprintf(timeString, "%02d:%02d<%4d>\n", min, s, c);
+	io_write(io, (uint8_t *)timeString, 12);      
 }
 
 
@@ -62,7 +55,6 @@ int main(void)
 	// Add timer task
 	timer_add_task(&TIMER_0, &task1);
 	
-	
 	while (1){
 		
 		//Detect the input from the DIP_SWITCH
@@ -80,9 +72,9 @@ int main(void)
 			s = 0;
 		}else if(!clock_edge_event1 && !clock_edge_event2 && !clock_edge_event3 && clock_edge_event4){
 			//Store the value to EEPROM
-			SmartEEPROM8[MEM_ADDR] = (uint32_t *)min;
-			SmartEEPROM8[MEM_ADDR+1] = (uint32_t *)s;
-			SmartEEPROM8[MEM_ADDR+2] = (uint32_t *)c;
+// 			SmartEEPROM8[MEM_ADDR] = min;
+// 			SmartEEPROM8[MEM_ADDR+1] = s;
+// 			SmartEEPROM8[MEM_ADDR+2] = c;
 		}
 	}	
 	

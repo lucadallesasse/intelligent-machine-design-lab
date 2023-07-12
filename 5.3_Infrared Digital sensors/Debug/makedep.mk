@@ -30,8 +30,6 @@ hal\src\hal_timer.c
 
 hal\src\hal_usart_async.c
 
-hal\src\hal_usart_sync.c
-
 hal\utils\src\utils_assert.c
 
 hal\utils\src\utils_event.c

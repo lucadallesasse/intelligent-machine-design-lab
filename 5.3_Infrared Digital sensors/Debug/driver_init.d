@@ -145,10 +145,9 @@ driver_init.d driver_init.o: .././driver_init.c .././driver_init.h \
  ../hal/include/hal_io.h ../hal/include/hpl_usart_async.h \
  ../hal/include/hpl_usart.h ../hal/include/hpl_irq.h \
  ../hal/utils/include/utils_ringbuffer.h ../hal/utils/include/compiler.h \
- ../hal/utils/include/utils_assert.h ../hal/include/hal_usart_sync.h \
- ../hal/include/hpl_usart_sync.h ../hal/include/hpl_usart.h \
- ../hpl/tcc/tcc_lite.h ../Config/peripheral_clk_config.h \
- ../hal/utils/include/utils.h ../hpl/rtc/hpl_rtc_base.h
+ ../hal/utils/include/utils_assert.h ../hpl/tcc/tcc_lite.h \
+ ../Config/peripheral_clk_config.h ../hal/utils/include/utils.h \
+ ../hpl/rtc/hpl_rtc_base.h
 
 .././driver_init.h:
 
@@ -521,12 +520,6 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAME54_DFP\1.1.134\include
 ../hal/utils/include/compiler.h:
 
 ../hal/utils/include/utils_assert.h:
-
-../hal/include/hal_usart_sync.h:
-
-../hal/include/hpl_usart_sync.h:
-
-../hal/include/hpl_usart.h:
 
 ../hpl/tcc/tcc_lite.h:
 

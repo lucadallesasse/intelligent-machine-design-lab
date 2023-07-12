@@ -23,16 +23,14 @@ extern "C" {
 
 #include <hal_timer.h>
 #include <hal_usart_async.h>
-
-#include <hal_usart_sync.h>
+#include <hal_usart_async.h>
 
 #include <hal_delay.h>
 #include <tcc_lite.h>
 
 extern struct timer_descriptor       TIMER_0;
 extern struct usart_async_descriptor USART_1;
-
-extern struct usart_sync_descriptor USART_0;
+extern struct usart_async_descriptor USART_0;
 
 void USART_1_PORT_init(void);
 void USART_1_CLOCK_init(void);

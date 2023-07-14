@@ -22,13 +22,15 @@ hal\src\hal_delay.c
 
 hal\src\hal_gpio.c
 
+hal\src\hal_i2c_m_sync.c
+
 hal\src\hal_init.c
 
 hal\src\hal_io.c
 
 hal\src\hal_sleep.c
 
-hal\src\hal_timer.c
+hal\src\hal_spi_m_sync.c
 
 hal\src\hal_usart_sync.c
 
@@ -62,13 +64,7 @@ hpl\ramecc\hpl_ramecc.c
 
 hpl\sercom\hpl_sercom.c
 
-hpl\systick\hpl_systick.c
-
-hpl\tcc\tcc_lite.c
-
-hpl\tc\hpl_tc.c
-
 main.c
 
-pwm.c
+set_duty.c
 

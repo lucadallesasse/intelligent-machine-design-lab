@@ -143,11 +143,10 @@ examples/driver_examples.d examples/driver_examples.o: \
  ../hal/include/hal_io.h ../hal/include/hal_sleep.h \
  ../hal/include/hal_usart_sync.h ../hal/include/hal_io.h \
  ../hal/include/hpl_usart_sync.h ../hal/include/hpl_usart.h \
- ../hal/include/hal_spi_m_dma.h ../hal/include/hpl_spi_m_dma.h \
+ ../hal/include/hal_spi_m_sync.h ../hal/include/hpl_spi_m_sync.h \
  ../hal/include/hpl_spi.h ../hal/utils/include/utils.h \
- ../hal/include/hpl_spi_dma.h ../hal/include/hpl_dma.h \
- ../hal/include/hal_spi_s_sync.h ../hal/include/hpl_spi_s_sync.h \
- ../hal/include/hpl_spi_sync.h
+ ../hal/include/hpl_spi_sync.h ../hal/include/hal_i2c_m_sync.h \
+ ../hal/include/hpl_i2c_m_sync.h
 
 ../examples/driver_examples.h:
 
@@ -509,20 +508,16 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAME54_DFP\1.1.134\include
 
 ../hal/include/hpl_usart.h:
 
-../hal/include/hal_spi_m_dma.h:
+../hal/include/hal_spi_m_sync.h:
 
-../hal/include/hpl_spi_m_dma.h:
+../hal/include/hpl_spi_m_sync.h:
 
 ../hal/include/hpl_spi.h:
 
 ../hal/utils/include/utils.h:
 
-../hal/include/hpl_spi_dma.h:
-
-../hal/include/hpl_dma.h:
-
-../hal/include/hal_spi_s_sync.h:
-
-../hal/include/hpl_spi_s_sync.h:
-
 ../hal/include/hpl_spi_sync.h:
+
+../hal/include/hal_i2c_m_sync.h:
+
+../hal/include/hpl_i2c_m_sync.h:

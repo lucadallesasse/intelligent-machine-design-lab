@@ -5,3 +5,9 @@
 [0706/114816:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
 [0706/221655:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
 [0706/230318:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0711/193414:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0711/194627:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0711/195629:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0711/195629:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0711/200300:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0712/204420:ERROR:ipc_channel_win.cc(475)] pipe error: 109

@@ -1,9 +1,9 @@
 #include <set_duty.h>
 
-double set_duty(uint8_t number){
+int set_duty(uint8_t number){
 	
 	static int CurrentState = 0;
-	static double output = 0;
+	static int output = 0;
 
 	// 	number 0 -> ASCII 48 -> binary 110000
 	// 	number 1 -> ASCII 49 -> binary 110001
@@ -25,42 +25,48 @@ double set_duty(uint8_t number){
 	
 	switch (CurrentState){
 		case 48:
-		output = 0;
+		output = 255;
 		break;
 		case 49:
-		output = 0.11;
+		output = 220;
 		break;
 		case 50:
-		output = 0.22;
+		output = 180;
 		break;
 		case 51:
-		output = 0.33;
+		output = 160;
 		break;
 		case 52:
-		output = 0.44;
+		output = 125;
+		break;
 		case 53:
-		output = 0.55;
+		output = 100;
+		break;
 		case 54:
-		output = 0.66;
+		output = 75;
+		break;
 		case 55:
-		output = 0.77;
+		output = 50;
+		break;
 		case 56:
-		output = 0.88;
+		output = 25;
+		break;
 		case 57:
-		output = 1;
-		case 43:
-		output += 0.11;
+		output = 0;
 		break;
 		case 45:
-		output -= 0.11;
+		output += 25;
+		break;
+		case 43:
+		output -= 25;
 		break;
 	}
 	
 	//check that the value of duty is between 0 and 1
-	if(output >= 1.0){
-		output = 1.0;
-		}else if(output <= 0.0){
-		output = 0.0;
+	if(output >= 250){
+		output = 250;
+		}else if(output <= 0){
+		output = 0;
 	}
 	return output;
 }

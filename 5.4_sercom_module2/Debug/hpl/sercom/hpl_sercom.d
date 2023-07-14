@@ -1,6 +1,6 @@
 hpl/sercom/hpl_sercom.d hpl/sercom/hpl_sercom.o: \
- ../hpl/sercom/hpl_sercom.c ../hal/include/hpl_spi_m_dma.h \
- ../hal/include/hpl_spi.h ../hal/utils/include/compiler.h \
+ ../hpl/sercom/hpl_sercom.c ../hal/include/hpl_dma.h \
+ ../hal/utils/include/compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
@@ -134,22 +134,20 @@ hpl/sercom/hpl_sercom.d hpl/sercom/hpl_sercom.o: \
  ../hri/hri_sdhc_e54.h ../hri/hri_sercom_e54.h ../hri/hri_supc_e54.h \
  ../hri/hri_tc_e54.h ../hri/hri_tcc_e54.h ../hri/hri_trng_e54.h \
  ../hri/hri_usb_e54.h ../hri/hri_wdt_e54.h \
- ../hal/utils/include/err_codes.h ../hal/utils/include/utils.h \
- ../hal/include/hpl_spi_dma.h ../hal/include/hpl_irq.h \
- ../hal/include/hpl_dma.h ../hal/include/hpl_i2c_m_async.h \
- ../hal/include/hpl_i2c_m_sync.h ../hal/include/hpl_irq.h \
+ ../hal/utils/include/err_codes.h ../hal/include/hpl_irq.h \
+ ../hal/include/hpl_i2c_m_async.h ../hal/include/hpl_i2c_m_sync.h \
+ ../hal/include/hpl_irq.h ../hal/utils/include/utils.h \
  ../hal/include/hpl_i2c_m_sync.h ../hal/include/hpl_i2c_s_async.h \
  ../hal/include/hpl_i2c_s_sync.h ../Config/hpl_sercom_config.h \
  ../Config/peripheral_clk_config.h ../hal/include/hpl_spi_m_async.h \
- ../hal/include/hpl_spi_async.h ../hal/include/hpl_spi_m_sync.h \
- ../hal/include/hpl_spi_sync.h ../hal/include/hpl_spi_s_async.h \
- ../hal/include/hpl_spi_s_sync.h ../hal/include/hpl_usart_async.h \
- ../hal/include/hpl_usart.h ../hal/include/hpl_usart_sync.h \
- ../hal/include/hpl_usart.h ../hal/utils/include/utils_assert.h
+ ../hal/include/hpl_spi.h ../hal/include/hpl_spi_async.h \
+ ../hal/include/hpl_spi_m_sync.h ../hal/include/hpl_spi_sync.h \
+ ../hal/include/hpl_spi_s_async.h ../hal/include/hpl_spi_s_sync.h \
+ ../hal/include/hpl_usart_async.h ../hal/include/hpl_usart.h \
+ ../hal/include/hpl_usart_sync.h ../hal/include/hpl_usart.h \
+ ../hal/utils/include/utils_assert.h
 
-../hal/include/hpl_spi_m_dma.h:
-
-../hal/include/hpl_spi.h:
+../hal/include/hpl_dma.h:
 
 ../hal/utils/include/compiler.h:
 
@@ -471,19 +469,15 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAME54_DFP\1.1.134\include
 
 ../hal/utils/include/err_codes.h:
 
-../hal/utils/include/utils.h:
-
-../hal/include/hpl_spi_dma.h:
-
 ../hal/include/hpl_irq.h:
-
-../hal/include/hpl_dma.h:
 
 ../hal/include/hpl_i2c_m_async.h:
 
 ../hal/include/hpl_i2c_m_sync.h:
 
 ../hal/include/hpl_irq.h:
+
+../hal/utils/include/utils.h:
 
 ../hal/include/hpl_i2c_m_sync.h:
 
@@ -496,6 +490,8 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAME54_DFP\1.1.134\include
 ../Config/peripheral_clk_config.h:
 
 ../hal/include/hpl_spi_m_async.h:
+
+../hal/include/hpl_spi.h:
 
 ../hal/include/hpl_spi_async.h:
 

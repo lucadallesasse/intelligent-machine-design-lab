@@ -11,18 +11,6 @@
 #include "utils.h"
 
 /**
- * Example of using UART to write "Hello World" using the IO abstraction.
- */
-void UART_example(void)
-{
-	struct io_descriptor *io;
-	usart_sync_get_io_descriptor(&UART, &io);
-	usart_sync_enable(&UART);
-
-	io_write(io, (uint8_t *)"Hello World!", 12);
-}
-
-/**
  * Example of using EDBG_UART to write "Hello World" using the IO abstraction.
  */
 void EDBG_UART_example(void)
@@ -48,56 +36,12 @@ void SPI_0_example(void)
 	io_write(io, example_SPI_0, 12);
 }
 
-static struct timer_task TIMER_1_task1, TIMER_1_task2;
-
-/**
- * Example of using TIMER_1.
- */
-static void TIMER_1_task1_cb(const struct timer_task *const timer_task)
+void I2C_0_example(void)
 {
-}
+	struct io_descriptor *I2C_0_io;
 
-static void TIMER_1_task2_cb(const struct timer_task *const timer_task)
-{
-}
-
-void TIMER_1_example(void)
-{
-	TIMER_1_task1.interval = 100;
-	TIMER_1_task1.cb       = TIMER_1_task1_cb;
-	TIMER_1_task1.mode     = TIMER_TASK_REPEAT;
-	TIMER_1_task2.interval = 200;
-	TIMER_1_task2.cb       = TIMER_1_task2_cb;
-	TIMER_1_task2.mode     = TIMER_TASK_REPEAT;
-
-	timer_add_task(&TIMER_1, &TIMER_1_task1);
-	timer_add_task(&TIMER_1, &TIMER_1_task2);
-	timer_start(&TIMER_1);
-}
-
-static struct timer_task TIMER_0_task1, TIMER_0_task2;
-
-/**
- * Example of using TIMER_0.
- */
-static void TIMER_0_task1_cb(const struct timer_task *const timer_task)
-{
-}
-
-static void TIMER_0_task2_cb(const struct timer_task *const timer_task)
-{
-}
-
-void TIMER_0_example(void)
-{
-	TIMER_0_task1.interval = 100;
-	TIMER_0_task1.cb       = TIMER_0_task1_cb;
-	TIMER_0_task1.mode     = TIMER_TASK_REPEAT;
-	TIMER_0_task2.interval = 200;
-	TIMER_0_task2.cb       = TIMER_0_task2_cb;
-	TIMER_0_task2.mode     = TIMER_TASK_REPEAT;
-
-	timer_add_task(&TIMER_0, &TIMER_0_task1);
-	timer_add_task(&TIMER_0, &TIMER_0_task2);
-	timer_start(&TIMER_0);
+	i2c_m_sync_get_io_descriptor(&I2C_0, &I2C_0_io);
+	i2c_m_sync_enable(&I2C_0);
+	i2c_m_sync_set_slaveaddr(&I2C_0, 0x12, I2C_M_SEVEN);
+	io_write(I2C_0_io, (uint8_t *)"Hello World!", 12);
 }

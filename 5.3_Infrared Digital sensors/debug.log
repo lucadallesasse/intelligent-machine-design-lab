@@ -39,3 +39,6 @@
 [0711/100229:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
 [0711/100234:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
 [0712/121912:ERROR:ipc_channel_win.cc(475)] pipe error: 109
+[0714/102221:ERROR:ipc_channel_win.cc(475)] pipe error: 109
+[0714/151403:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0714/153544:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.

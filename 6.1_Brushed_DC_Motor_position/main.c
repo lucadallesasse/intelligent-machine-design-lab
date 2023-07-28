@@ -139,7 +139,7 @@ void TIMER_2_config(void)
 void pwm_out(uint32_t period, uint32_t duty_cycle){
 	//function to set the pwm duty cycle
 	tcc_disable(TCC0);
-	tcc_set_compare_value(TCC0,duty_cycle,0);
+	tcc_set_compare_buffer_value(TCC0,duty_cycle,0);
 	tcc_enable(TCC0);
 }
 

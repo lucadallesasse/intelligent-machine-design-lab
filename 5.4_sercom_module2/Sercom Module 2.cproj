@@ -458,12 +458,6 @@
     <Compile Include="Config\RTE_Components.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="custom_functions.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="custom_functions.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="Device_Startup\startup_same54.c">
       <SubType>compile</SubType>
     </Compile>

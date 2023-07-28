@@ -7,7 +7,7 @@ extern "C" {
 
 #include <atmel_start.h>
 
-int set_duty(uint8_t);
+uint8_t set_duty(uint8_t);
 	
 #ifdef __cplusplus
 }

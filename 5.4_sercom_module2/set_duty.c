@@ -1,6 +1,6 @@
 #include <set_duty.h>
 
-int set_duty(uint8_t number){
+uint8_t set_duty(uint8_t number){
 	
 	static int CurrentState = 0;
 	static int output = 0;
@@ -18,55 +18,55 @@ int set_duty(uint8_t number){
 	// 	   +     -> ASCII 43 -> binary 101011
 	// 	   -     -> ASCII 45 -> binary 101101
 
-	if(number != 48 && number != 49 && number != 50 && number != 51 && number != 52 && number != 53 && number != 54 && number != 55 && number != 56 && number != 57 && number != 43 && number != 45){
+	if(number != 48 && number != 49 && number != 50 && number != 51 && number != 52 && number != 53 && number != 54 && number != 55 && number != 56 && number != 57){
 		}else{
 		CurrentState = number;
 	}
 	
-	switch (CurrentState){
-		case 48:
-		output = 255;
-		break;
-		case 49:
-		output = 220;
-		break;
-		case 50:
-		output = 180;
-		break;
-		case 51:
-		output = 160;
-		break;
-		case 52:
-		output = 125;
-		break;
-		case 53:
-		output = 100;
-		break;
-		case 54:
-		output = 75;
-		break;
-		case 55:
-		output = 50;
-		break;
-		case 56:
-		output = 25;
-		break;
-		case 57:
-		output = 0;
-		break;
-		case 45:
-		output += 25;
-		break;
-		case 43:
-		output -= 25;
-		break;
+	if(number == 43){
+		CurrentState += 1;
+	}else if(number == 45){
+		CurrentState -= 1;
 	}
 	
-	//check that the value of duty is between 0 and 1
-	if(output >= 250){
-		output = 250;
-		}else if(output <= 0){
-		output = 0;
+	if(CurrentState >= 57){
+		CurrentState = 57;
+	}else if(CurrentState <= 48 ){
+		CurrentState = 48;
 	}
+	
+	switch (CurrentState){
+		case 48:
+		output = 0b10000000;
+		break;
+		case 49:
+		output = 0b01110000;
+		break;
+		case 50:
+		output = 0b01100000;
+		break;
+		case 51:
+		output = 0b01010100;
+		break;
+		case 52:
+		output = 0b01001000;
+		break;
+		case 53:
+		output = 0b00111100;
+		break;
+		case 54:
+		output = 0b00110000;
+		break;
+		case 55:
+		output = 0b00100100;
+		break;
+		case 56:
+		output = 0b00011000;
+		break;
+		case 57:
+		output = 0b00000000;
+		break;
+	}
+
 	return output;
 }

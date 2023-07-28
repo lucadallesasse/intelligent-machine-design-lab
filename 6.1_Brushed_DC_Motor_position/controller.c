@@ -12,7 +12,7 @@ char debug[200];
 // Fine tune these parameters
 float Kp_speed = 3;
 
-float Kp_pos = 0.2;
+float Kp_pos = 1;
 float Ki_pos = 0.0;
 
 // define the duty cycle to be produced by the micro controller
@@ -30,13 +30,13 @@ int32_t p_speed_control(int32_t current_speed, int32_t target_speed)
 	
 	P_term = Kp_speed*P_error;
 	
-	dutycycle_speed = P_term + dutycycle_speed;
+	dutycycle_speed = P_term;
 	
 	if (dutycycle_speed > 100)
 	{
 		dutycycle_speed = 100;
 	}
-	else if (dutycycle_speed < -100)    //Only output dutycycle between zero and 100%!!
+	else if (dutycycle_speed <= -100)    
 	{
 		dutycycle_speed = -100;
 	}
@@ -83,9 +83,9 @@ int32_t p_position_control(int32_t current_position, int32_t target_position)
 	{
 		dutycycle_pos = -600;
 	}
-	else if (dutycycle_pos < 60 || dutycycle_pos > -60){
+	/*else if (dutycycle_pos < 60 || dutycycle_pos > -60){
 		dutycycle_pos = 0;
-	}
+	}*/
 	
 	return dutycycle_pos;
 }
